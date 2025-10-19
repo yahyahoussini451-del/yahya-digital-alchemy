@@ -62,6 +62,42 @@
     "title": "We Lead the Innovation",
     "description": "Pioneering cutting-edge solutions with AI, 3D technology, and full-stack development. We transform ideas into immersive digital experiences that push boundaries and set new standards in the industry."
   },
+  "appsPortfolio": {
+    "title": "Apps I've Built",
+    "subtitle": "Real-world applications serving Moroccan businesses",
+    "categories": {
+      "ecommerce": "E-Commerce Solutions",
+      "business": "Business Management",
+      "healthcare": "Healthcare Systems",
+      "education": "Educational Platforms"
+    },
+    "apps": {
+      "ecommerceApp": {
+        "title": "Moroccan E-Commerce Platform",
+        "description": "Full-featured online store with product catalog, inventory management, and seamless checkout experience"
+      },
+      "dashboard": {
+        "title": "Advanced Analytics Dashboard",
+        "description": "Comprehensive business intelligence dashboard with real-time analytics and reporting"
+      },
+      "cafe": {
+        "title": "Coffee Shop Management",
+        "description": "Point-of-sale system with menu management, orders, and customer loyalty features"
+      },
+      "lawyer": {
+        "title": "Law Firm Portal",
+        "description": "Professional legal practice management with case tracking and client appointments"
+      },
+      "doctor": {
+        "title": "Medical Clinic System",
+        "description": "Patient management system with appointments, records, and prescription tracking"
+      },
+      "school": {
+        "title": "Night School Platform",
+        "description": "Complete learning management system with courses, schedules, and student tracking"
+      }
+    }
+  },
   "projects": {
     "title": "Featured Projects",
     "brandhub": {

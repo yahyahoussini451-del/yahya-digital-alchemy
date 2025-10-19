@@ -62,6 +62,42 @@
     "title": "Nous Menons l'Innovation",
     "description": "Pionnier de solutions de pointe avec l'IA, la technologie 3D et le développement full-stack. Nous transformons les idées en expériences numériques immersives qui repoussent les limites et établissent de nouvelles normes dans l'industrie."
   },
+  "appsPortfolio": {
+    "title": "Applications que j'ai Créées",
+    "subtitle": "Applications réelles au service des entreprises marocaines",
+    "categories": {
+      "ecommerce": "Solutions E-Commerce",
+      "business": "Gestion d'Entreprise",
+      "healthcare": "Systèmes de Santé",
+      "education": "Plateformes Éducatives"
+    },
+    "apps": {
+      "ecommerceApp": {
+        "title": "Plateforme E-Commerce Marocaine",
+        "description": "Boutique en ligne complète avec catalogue de produits, gestion des stocks et paiement fluide"
+      },
+      "dashboard": {
+        "title": "Tableau de Bord Analytique Avancé",
+        "description": "Tableau de bord business intelligence complet avec analyses et rapports en temps réel"
+      },
+      "cafe": {
+        "title": "Gestion de Café",
+        "description": "Système de point de vente avec gestion de menu, commandes et fidélité client"
+      },
+      "lawyer": {
+        "title": "Portail Cabinet d'Avocat",
+        "description": "Gestion professionnelle de cabinet juridique avec suivi des dossiers et rendez-vous clients"
+      },
+      "doctor": {
+        "title": "Système de Clinique Médicale",
+        "description": "Système de gestion des patients avec rendez-vous, dossiers et suivi des prescriptions"
+      },
+      "school": {
+        "title": "Plateforme École du Soir",
+        "description": "Système de gestion de l'apprentissage complet avec cours, horaires et suivi des étudiants"
+      }
+    }
+  },
   "projects": {
     "title": "Projets Phares",
     "brandhub": {
