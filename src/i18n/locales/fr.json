@@ -69,7 +69,11 @@
       "ecommerce": "Solutions E-Commerce",
       "business": "Gestion d'Entreprise",
       "healthcare": "Systèmes de Santé",
-      "education": "Plateformes Éducatives"
+      "education": "Plateformes Éducatives",
+      "realestate": "Immobilier",
+      "hospitality": "Hôtellerie",
+      "logistics": "Logistique & Livraison",
+      "fintech": "Technologie Financière"
     },
     "apps": {
       "ecommerceApp": {
@@ -95,6 +99,30 @@
       "school": {
         "title": "Plateforme École du Soir",
         "description": "Système de gestion de l'apprentissage complet avec cours, horaires et suivi des étudiants"
+      },
+      "realestate": {
+        "title": "Plateforme Immobilière",
+        "description": "Système de gestion immobilière avec visites virtuelles, filtres de recherche et portail agent"
+      },
+      "booking": {
+        "title": "Réservation Hôtel & Restaurant",
+        "description": "Gestion hôtelière complète avec réservations de chambres, tables et services clients"
+      },
+      "logistics": {
+        "title": "Système de Gestion Logistique",
+        "description": "Suivi de flotte, optimisation d'itinéraires et tableau de bord de livraison en temps réel"
+      },
+      "fintech": {
+        "title": "Application Bancaire FinTech",
+        "description": "Banque numérique sécurisée avec paiements mobiles, gestion de compte et historique"
+      },
+      "fitness": {
+        "title": "Gestion Fitness & Gym",
+        "description": "Gestion des membres, planification des cours, suivi d'entraînement et coordination des entraîneurs"
+      },
+      "events": {
+        "title": "Plateforme de Gestion d'Événements",
+        "description": "Solution complète de planification d'événements avec réservation de lieu et coordination"
       }
     }
   },

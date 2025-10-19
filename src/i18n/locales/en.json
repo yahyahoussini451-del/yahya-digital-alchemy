@@ -69,7 +69,11 @@
       "ecommerce": "E-Commerce Solutions",
       "business": "Business Management",
       "healthcare": "Healthcare Systems",
-      "education": "Educational Platforms"
+      "education": "Educational Platforms",
+      "realestate": "Real Estate",
+      "hospitality": "Hospitality",
+      "logistics": "Logistics & Delivery",
+      "fintech": "Financial Technology"
     },
     "apps": {
       "ecommerceApp": {
@@ -95,6 +99,30 @@
       "school": {
         "title": "Night School Platform",
         "description": "Complete learning management system with courses, schedules, and student tracking"
+      },
+      "realestate": {
+        "title": "Real Estate Platform",
+        "description": "Property listing and management system with virtual tours, search filters, and agent portal"
+      },
+      "booking": {
+        "title": "Hotel & Restaurant Booking",
+        "description": "Complete hospitality management with room reservations, table bookings, and guest services"
+      },
+      "logistics": {
+        "title": "Logistics Management System",
+        "description": "Fleet tracking, route optimization, and real-time delivery management dashboard"
+      },
+      "fintech": {
+        "title": "FinTech Banking App",
+        "description": "Secure digital banking with mobile payments, account management, and transaction history"
+      },
+      "fitness": {
+        "title": "Fitness & Gym Management",
+        "description": "Member management, class scheduling, workout tracking, and trainer coordination system"
+      },
+      "events": {
+        "title": "Event Management Platform",
+        "description": "Complete event planning solution with venue booking, guest management, and vendor coordination"
       }
     }
   },

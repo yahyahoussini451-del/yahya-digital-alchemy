@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ShoppingCart, BarChart3, Coffee, Scale, Stethoscope, GraduationCap } from 'lucide-react';
+import { ShoppingCart, BarChart3, Coffee, Scale, Stethoscope, GraduationCap, Building2, Hotel, Truck, Wallet, Dumbbell, Calendar } from 'lucide-react';
 
 import ecommerceApp from '@/assets/app-ecommerce-moroccan.jpg';
 import dashboard from '@/assets/app-dashboard-moroccan.jpg';
@@ -12,6 +12,12 @@ import cafe from '@/assets/app-cafe-moroccan.jpg';
 import lawyer from '@/assets/app-lawyer-moroccan.jpg';
 import doctor from '@/assets/app-doctor-moroccan.jpg';
 import school from '@/assets/app-school-moroccan.jpg';
+import realestate from '@/assets/app-realestate-moroccan.jpg';
+import booking from '@/assets/app-booking-moroccan.jpg';
+import logistics from '@/assets/app-logistics-moroccan.jpg';
+import fintech from '@/assets/app-fintech-moroccan.jpg';
+import fitness from '@/assets/app-fitness-moroccan.jpg';
+import events from '@/assets/app-events-moroccan.jpg';
 
 export const AppsPortfolio = () => {
   const { t } = useTranslation();
@@ -60,6 +66,48 @@ export const AppsPortfolio = () => {
       icon: GraduationCap,
       category: 'education',
       gradient: 'from-cyan-500 to-blue-600'
+    },
+    {
+      key: 'realestate',
+      image: realestate,
+      icon: Building2,
+      category: 'realestate',
+      gradient: 'from-yellow-500 to-orange-500'
+    },
+    {
+      key: 'booking',
+      image: booking,
+      icon: Hotel,
+      category: 'hospitality',
+      gradient: 'from-indigo-500 to-purple-600'
+    },
+    {
+      key: 'logistics',
+      image: logistics,
+      icon: Truck,
+      category: 'logistics',
+      gradient: 'from-slate-500 to-gray-700'
+    },
+    {
+      key: 'fintech',
+      image: fintech,
+      icon: Wallet,
+      category: 'fintech',
+      gradient: 'from-emerald-500 to-green-700'
+    },
+    {
+      key: 'fitness',
+      image: fitness,
+      icon: Dumbbell,
+      category: 'business',
+      gradient: 'from-rose-500 to-pink-600'
+    },
+    {
+      key: 'events',
+      image: events,
+      icon: Calendar,
+      category: 'business',
+      gradient: 'from-violet-500 to-fuchsia-600'
     }
   ];
 
