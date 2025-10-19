@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "services": "Services",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "I Build Intelligent Digital Experiences.",
+    "subtitle": "Full Stack Developer & Media Buyer Expert — combining technology and strategy to help brands grow.",
+    "viewWork": "View My Work",
+    "hireMe": "Hire Me"
+  },
+  "about": {
+    "title": "About Me",
+    "bio": "I'm a Moroccan full stack developer and media buyer passionate about building scalable web apps, AI-powered assistants, and high-converting digital strategies. My mission is to merge technology, automation, and creativity to create measurable business impact."
+  },
+  "skills": {
+    "title": "Skills & Expertise",
+    "webDev": "Web Development",
+    "automation": "Automation / AI",
+    "marketing": "Marketing",
+    "creative": "Creative Tools"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "tussna": {
+      "name": "Tussna",
+      "desc": "Moroccan bio cosmetics eCommerce brand with AI integration"
+    },
+    "aiponics": {
+      "name": "AI.Ponics",
+      "desc": "Agritech hydroponic system powered by AI"
+    },
+    "yahyagent": {
+      "name": "yahyAgent",
+      "desc": "Multilingual AI WhatsApp sales assistant"
+    },
+    "saas": {
+      "name": "Dental SaaS Dashboard",
+      "desc": "Complete management system for dental centers"
+    }
+  },
+  "services": {
+    "title": "Services",
+    "webApp": {
+      "title": "Web App Development",
+      "desc": "Custom web applications built with modern technologies"
+    },
+    "aiAuto": {
+      "title": "AI Automation & WhatsApp Bots",
+      "desc": "Intelligent automation solutions for business growth"
+    },
+    "mediaBuying": {
+      "title": "Media Buying",
+      "desc": "Strategic Meta & Google Ads campaigns"
+    },
+    "saas": {
+      "title": "SaaS Consulting & MVP Development",
+      "desc": "From idea to production-ready product"
+    }
+  },
+  "testimonials": {
+    "title": "Client Testimonials",
+    "quote1": "Yahya delivered beyond expectations. His SaaS knowledge and clean design transformed our business.",
+    "quote2": "Professional, creative, and technically sharp. A pleasure to work with."
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "whatsapp": "WhatsApp Me"
+  },
+  "footer": {
+    "tagline": "© 2025 Yahya Houssini — Built with passion and precision."
+  }
+}

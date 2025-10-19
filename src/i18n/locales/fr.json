@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "services": "Services",
+    "testimonials": "Témoignages",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Je Construis des Expériences Numériques Intelligentes.",
+    "subtitle": "Développeur Full Stack & Expert Media Buyer — alliant technologie et stratégie pour aider les marques à croître.",
+    "viewWork": "Voir Mon Travail",
+    "hireMe": "Me Recruter"
+  },
+  "about": {
+    "title": "À Propos de Moi",
+    "bio": "Je suis un développeur full stack marocain et media buyer passionné par la création d'applications web évolutives, d'assistants alimentés par l'IA et de stratégies numériques à forte conversion. Ma mission est de fusionner technologie, automatisation et créativité pour créer un impact commercial mesurable."
+  },
+  "skills": {
+    "title": "Compétences & Expertise",
+    "webDev": "Développement Web",
+    "automation": "Automatisation / IA",
+    "marketing": "Marketing",
+    "creative": "Outils Créatifs"
+  },
+  "projects": {
+    "title": "Projets Phares",
+    "tussna": {
+      "name": "Tussna",
+      "desc": "Marque marocaine de cosmétiques bio avec intégration IA"
+    },
+    "aiponics": {
+      "name": "AI.Ponics",
+      "desc": "Système hydroponique agritech alimenté par l'IA"
+    },
+    "yahyagent": {
+      "name": "yahyAgent",
+      "desc": "Assistant de vente IA multilingue WhatsApp"
+    },
+    "saas": {
+      "name": "Dashboard SaaS Dentaire",
+      "desc": "Système de gestion complet pour centres dentaires"
+    }
+  },
+  "services": {
+    "title": "Services",
+    "webApp": {
+      "title": "Développement d'Applications Web",
+      "desc": "Applications web sur mesure avec technologies modernes"
+    },
+    "aiAuto": {
+      "title": "Automatisation IA & Bots WhatsApp",
+      "desc": "Solutions d'automatisation intelligente pour la croissance"
+    },
+    "mediaBuying": {
+      "title": "Achat Média",
+      "desc": "Campagnes stratégiques Meta & Google Ads"
+    },
+    "saas": {
+      "title": "Conseil SaaS & Développement MVP",
+      "desc": "De l'idée au produit prêt pour la production"
+    }
+  },
+  "testimonials": {
+    "title": "Témoignages Clients",
+    "quote1": "Yahya a dépassé les attentes. Sa connaissance SaaS et son design épuré ont transformé notre entreprise.",
+    "quote2": "Professionnel, créatif et techniquement pointu. Un plaisir de travailler avec lui."
+  },
+  "contact": {
+    "title": "Travaillons Ensemble",
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "send": "Envoyer le Message",
+    "whatsapp": "WhatsApp"
+  },
+  "footer": {
+    "tagline": "© 2025 Yahya Houssini — Construit avec passion et précision."
+  }
+}
