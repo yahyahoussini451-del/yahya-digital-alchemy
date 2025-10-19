@@ -58,6 +58,10 @@
       "expert": "Expert en Innovation IA"
     }
   },
+  "innovation": {
+    "title": "Nous Menons l'Innovation",
+    "description": "Pionnier de solutions de pointe avec l'IA, la technologie 3D et le développement full-stack. Nous transformons les idées en expériences numériques immersives qui repoussent les limites et établissent de nouvelles normes dans l'industrie."
+  },
   "projects": {
     "title": "Projets Phares",
     "brandhub": {

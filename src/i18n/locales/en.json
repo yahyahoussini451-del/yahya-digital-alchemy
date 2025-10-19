@@ -58,6 +58,10 @@
       "expert": "AI Innovation Expert"
     }
   },
+  "innovation": {
+    "title": "We Lead the Innovation",
+    "description": "Pioneering cutting-edge solutions with AI, 3D technology, and full-stack development. We transform ideas into immersive digital experiences that push boundaries and set new standards in the industry."
+  },
   "projects": {
     "title": "Featured Projects",
     "brandhub": {
