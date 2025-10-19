@@ -35,6 +35,7 @@ export const Header = () => {
     { key: 'skills', id: 'skills' },
     { key: 'projects', id: 'projects' },
     { key: 'services', id: 'services' },
+    { key: 'certifications', id: 'certifications' },
     { key: 'testimonials', id: 'testimonials' },
     { key: 'contact', id: 'contact' }
   ];

@@ -5,6 +5,7 @@
     "skills": "Compétences",
     "projects": "Projets",
     "services": "Services",
+    "certifications": "Certifications",
     "testimonials": "Témoignages",
     "contact": "Contact"
   },
@@ -101,6 +102,27 @@
     "saas": {
       "title": "Conseil SaaS & Développement MVP",
       "desc": "De l'idée au produit prêt pour la production"
+    }
+  },
+  "certifications": {
+    "title": "Certifications & Réalisations",
+    "googleBI1": {
+      "title": "Certificat Google Business Intelligence",
+      "issuer": "Google via Coursera",
+      "date": "Septembre 2025",
+      "description": "Certification professionnelle complète couvrant les fondamentaux de la Business Intelligence, les modèles et pipelines de données, et les rapports de tableaux de bord. Compétence démontrée dans la transformation de données en insights actionnables."
+    },
+    "googleBI2": {
+      "title": "Certificat Google Business Intelligence",
+      "issuer": "Google via Coursera",
+      "date": "Septembre 2025",
+      "description": "Certification avancée de 4 cours incluant les fondamentaux BI, insights de données, tableaux de bord et rapports, et techniques de recherche d'emploi accélérées par l'IA. Expertise en visualisation de données et processus d'intelligence d'affaires."
+    },
+    "marketingDigital": {
+      "title": "Certification Marketing Digital & Branding",
+      "issuer": "L'Académie des Experts",
+      "date": "Février 2025",
+      "description": "Formation professionnelle intensive de 15 heures en Marketing Digital et stratégies de Branding. Expertise acquise en techniques marketing modernes, développement de marque et exécution de campagnes digitales."
     }
   },
   "testimonials": {

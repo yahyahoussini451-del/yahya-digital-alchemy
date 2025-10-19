@@ -5,6 +5,7 @@
     "skills": "Skills",
     "projects": "Projects",
     "services": "Services",
+    "certifications": "Certifications",
     "testimonials": "Testimonials",
     "contact": "Contact"
   },
@@ -101,6 +102,27 @@
     "saas": {
       "title": "SaaS Consulting & MVP Development",
       "desc": "From idea to production-ready product"
+    }
+  },
+  "certifications": {
+    "title": "Certifications & Achievements",
+    "googleBI1": {
+      "title": "Google Business Intelligence Certificate",
+      "issuer": "Google via Coursera",
+      "date": "September 2025",
+      "description": "Completed comprehensive professional certification covering Business Intelligence foundations, data models & pipelines, and dashboard reporting. Demonstrated competency in transforming data into actionable insights and building stakeholder-focused dashboards."
+    },
+    "googleBI2": {
+      "title": "Google Business Intelligence Certificate",
+      "issuer": "Google via Coursera",
+      "date": "September 2025",
+      "description": "Advanced 4-course certification including BI foundations, data insights, dashboards & reports, and AI-accelerated job search techniques. Expertise in creating data visualizations and business intelligence processes."
+    },
+    "marketingDigital": {
+      "title": "Digital Marketing & Branding Certification",
+      "issuer": "L'Académie des Experts",
+      "date": "February 2025",
+      "description": "Completed intensive 15-hour professional training in Digital Marketing and Branding strategies. Gained expertise in modern marketing techniques, brand development, and digital campaign execution."
     }
   },
   "testimonials": {
