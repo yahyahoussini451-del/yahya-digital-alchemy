@@ -16,7 +16,7 @@
   },
   "about": {
     "title": "À Propos de Moi",
-    "bio": "Je suis un développeur full stack marocain et media buyer passionné par la création d'applications web évolutives, d'assistants alimentés par l'IA et de stratégies numériques à forte conversion. Ma mission est de fusionner technologie, automatisation et créativité pour créer un impact commercial mesurable."
+    "bio": "Je suis un développeur full stack marocain et media buyer, actuellement PDG et Co-Fondateur de brandhub.ma. Je suis passionné par la création d'applications web évolutives, d'assistants alimentés par l'IA et de stratégies numériques à forte conversion. Ma mission est de fusionner technologie, automatisation et créativité pour créer un impact commercial mesurable."
   },
   "skills": {
     "title": "Compétences & Expertise",
@@ -27,6 +27,14 @@
   },
   "projects": {
     "title": "Projets Phares",
+    "brandhub": {
+      "name": "brandhub.ma",
+      "desc": "PDG & Co-Fondateur - Plateforme de Développement de Marques Personnalisées"
+    },
+    "multicommerce": {
+      "name": "Plateforme E-commerce Multi-Marques",
+      "desc": "Plateforme évolutive avec thèmes personnalisés pour plusieurs marques"
+    },
     "tussna": {
       "name": "Tussna",
       "desc": "Marque marocaine de cosmétiques bio avec intégration IA"

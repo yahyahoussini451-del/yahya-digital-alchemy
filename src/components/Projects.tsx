@@ -13,10 +13,22 @@ export const Projects = () => {
 
   const projects = [
     {
+      name: t('projects.brandhub.name'),
+      description: t('projects.brandhub.desc'),
+      tech: ['React', 'Node.js', 'MongoDB', 'Brand Platform'],
+      gradient: 'from-pink-500 to-rose-500'
+    },
+    {
+      name: t('projects.multicommerce.name'),
+      description: t('projects.multicommerce.desc'),
+      tech: ['React', 'Node.js', 'Custom Themes', 'Multi-Tenant'],
+      gradient: 'from-purple-500 to-indigo-500'
+    },
+    {
       name: t('projects.tussna.name'),
       description: t('projects.tussna.desc'),
       tech: ['React', 'Node.js', 'AI', 'eCommerce'],
-      gradient: 'from-pink-500 to-rose-500'
+      gradient: 'from-orange-500 to-red-500'
     },
     {
       name: t('projects.aiponics.name'),
@@ -34,7 +46,7 @@ export const Projects = () => {
       name: t('projects.saas.name'),
       description: t('projects.saas.desc'),
       tech: ['React', 'MongoDB', 'Express', 'SaaS'],
-      gradient: 'from-purple-500 to-indigo-500'
+      gradient: 'from-cyan-500 to-teal-500'
     }
   ];
 
@@ -51,7 +63,7 @@ export const Projects = () => {
             {t('projects.title')}
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {projects.map((project, index) => (
               <motion.div
                 key={project.name}

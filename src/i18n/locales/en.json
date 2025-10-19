@@ -16,7 +16,7 @@
   },
   "about": {
     "title": "About Me",
-    "bio": "I'm a Moroccan full stack developer and media buyer passionate about building scalable web apps, AI-powered assistants, and high-converting digital strategies. My mission is to merge technology, automation, and creativity to create measurable business impact."
+    "bio": "I'm a Moroccan full stack developer and media buyer, currently CEO & Co-Founder at brandhub.ma. I'm passionate about building scalable web apps, AI-powered assistants, and high-converting digital strategies. My mission is to merge technology, automation, and creativity to create measurable business impact."
   },
   "skills": {
     "title": "Skills & Expertise",
@@ -27,6 +27,14 @@
   },
   "projects": {
     "title": "Featured Projects",
+    "brandhub": {
+      "name": "brandhub.ma",
+      "desc": "CEO & Co-Founder - Custom Brand Development Platform"
+    },
+    "multicommerce": {
+      "name": "Multi-Brand E-commerce Platform",
+      "desc": "Scalable platform with custom themes for multiple brands"
+    },
     "tussna": {
       "name": "Tussna",
       "desc": "Moroccan bio cosmetics eCommerce brand with AI integration"
