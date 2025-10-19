@@ -20,10 +20,42 @@
   },
   "skills": {
     "title": "Skills & Expertise",
-    "webDev": "Web Development",
-    "automation": "Automation / AI",
-    "marketing": "Marketing",
-    "creative": "Creative Tools"
+    "fullstack": {
+      "title": "Full-Stack Development",
+      "level": "Expert Level",
+      "items": ["React.js & Vue.js (Advanced)", "Node.js & Express.js (Expert)", "JavaScript/TypeScript (Advanced)", "Python & Django (Intermediate)", "HTML5/CSS3 & Responsive Design", "RESTful APIs & GraphQL", "Database Design (MongoDB, PostgreSQL)", "Version Control (Git/GitHub)"]
+    },
+    "branding": {
+      "title": "Branding & Design Expert",
+      "level": "Professional Experience",
+      "items": ["Brand Strategy & Identity Development", "Logo Design & Visual Identity", "Brand Guidelines & Style Systems", "Marketing Material Design", "Digital Brand Assets Creation", "Brand Positioning & Messaging", "Client Brand Consultation", "Multi-Brand Portfolio Management"]
+    },
+    "3d": {
+      "title": "3D Modeling & Animation",
+      "level": "Expert Level",
+      "items": ["3D Product Modeling & Visualization", "Character Modeling & Rigging", "Architectural 3D Rendering", "Motion Graphics & Animation", "Texture Design & UV Mapping", "Lighting & Environment Setup", "Render Optimization & Post-Processing", "Interactive 3D Web Integration"]
+    },
+    "ai": {
+      "title": "AI & Machine Learning",
+      "level": "Advanced Specialist",
+      "items": ["Prompt Engineering (GPT-4, Claude)", "Custom AI Model Development", "TensorFlow & Machine Learning", "Natural Language Processing", "Computer Vision Applications", "YOLO Object Detection", "LLM Training & Fine-tuning", "AI Integration & APIs", "Data Science & Analytics", "Predictive Modeling"]
+    },
+    "bi": {
+      "title": "Business Intelligence",
+      "level": "Google Certified",
+      "items": ["Google BI & Data Analytics (Certified)", "Tableau & Power BI", "D3.js & Data Visualization", "Statistical Analysis", "KPI Development & Tracking", "Automated Reporting", "ETL Processes", "Dashboard Design"]
+    },
+    "business": {
+      "title": "Business & Strategy",
+      "level": "Proven Success",
+      "items": ["Startup Founding & Management", "Brand Strategy & Development", "Visual Identity & Logo Design", "Brand Positioning & Messaging", "E-commerce Platform Development", "Digital Marketing & SEO", "Project Management (Agile)", "Client Relationship Management"]
+    },
+    "stats": {
+      "users": "Active Commercial Users",
+      "winner": "Competition Winner",
+      "certified": "Google BI/DA Certified",
+      "expert": "AI Innovation Expert"
+    }
   },
   "projects": {
     "title": "Featured Projects",

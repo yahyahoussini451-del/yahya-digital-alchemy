@@ -20,10 +20,42 @@
   },
   "skills": {
     "title": "Compétences & Expertise",
-    "webDev": "Développement Web",
-    "automation": "Automatisation / IA",
-    "marketing": "Marketing",
-    "creative": "Outils Créatifs"
+    "fullstack": {
+      "title": "Développement Full-Stack",
+      "level": "Niveau Expert",
+      "items": ["React.js & Vue.js (Avancé)", "Node.js & Express.js (Expert)", "JavaScript/TypeScript (Avancé)", "Python & Django (Intermédiaire)", "HTML5/CSS3 & Design Responsive", "APIs RESTful & GraphQL", "Conception de Base de Données (MongoDB, PostgreSQL)", "Contrôle de Version (Git/GitHub)"]
+    },
+    "branding": {
+      "title": "Expert en Branding & Design",
+      "level": "Expérience Professionnelle",
+      "items": ["Stratégie de Marque & Développement d'Identité", "Design de Logo & Identité Visuelle", "Directives de Marque & Systèmes de Style", "Design de Matériel Marketing", "Création d'Actifs de Marque Numériques", "Positionnement & Messaging de Marque", "Consultation de Marque Client", "Gestion de Portfolio Multi-Marques"]
+    },
+    "3d": {
+      "title": "Modélisation & Animation 3D",
+      "level": "Niveau Expert",
+      "items": ["Modélisation & Visualisation de Produits 3D", "Modélisation & Rigging de Personnages", "Rendu 3D Architectural", "Motion Graphics & Animation", "Design de Texture & Mapping UV", "Configuration d'Éclairage & Environnement", "Optimisation de Rendu & Post-Traitement", "Intégration 3D Web Interactive"]
+    },
+    "ai": {
+      "title": "IA & Machine Learning",
+      "level": "Spécialiste Avancé",
+      "items": ["Ingénierie de Prompts (GPT-4, Claude)", "Développement de Modèles IA Personnalisés", "TensorFlow & Machine Learning", "Traitement du Langage Naturel", "Applications de Vision par Ordinateur", "Détection d'Objets YOLO", "Formation & Ajustement de LLM", "Intégration IA & APIs", "Science des Données & Analytique", "Modélisation Prédictive"]
+    },
+    "bi": {
+      "title": "Business Intelligence",
+      "level": "Certifié Google",
+      "items": ["Google BI & Data Analytics (Certifié)", "Tableau & Power BI", "D3.js & Visualisation de Données", "Analyse Statistique", "Développement & Suivi de KPI", "Rapports Automatisés", "Processus ETL", "Design de Tableaux de Bord"]
+    },
+    "business": {
+      "title": "Business & Stratégie",
+      "level": "Succès Prouvé",
+      "items": ["Fondation & Gestion de Startup", "Stratégie de Marque & Développement", "Identité Visuelle & Design de Logo", "Positionnement & Messaging de Marque", "Développement de Plateforme E-commerce", "Marketing Digital & SEO", "Gestion de Projet (Agile)", "Gestion de Relation Client"]
+    },
+    "stats": {
+      "users": "Utilisateurs Commerciaux Actifs",
+      "winner": "Gagnant de Compétition",
+      "certified": "Certifié Google BI/DA",
+      "expert": "Expert en Innovation IA"
+    }
   },
   "projects": {
     "title": "Projets Phares",
