@@ -23,10 +23,9 @@ export const Hero = () => {
         mediaType="image"
         mediaSrc="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?q=80&w=1280&auto=format&fit=crop"
         bgImageSrc="https://images.unsplash.com/photo-1541410965313-d53b3c16ef17?q=80&w=1920&auto=format&fit=crop"
-        title={t('hero.title')}
-        subtitle={t('hero.subtitle')}
+        title="Build Intelligent Digital Experiences."
+        subtitle="Full Stack Developer & Media Buyer Expert — combining technology and strategy to help brands grow."
         scrollToExpand="Scroll to explore"
-        textBlend
       >
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
