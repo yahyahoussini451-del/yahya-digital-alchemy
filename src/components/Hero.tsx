@@ -40,7 +40,7 @@ export const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              onClick={() => scrollToSection('contact')}
+              onClick={() => window.location.href = 'mailto:yahyahoussini366@gmail.com?subject=Let\'s Work Together'}
               className="border-2 font-medium px-8"
             >
               {t('hero.hireMe')}

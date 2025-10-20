@@ -4,10 +4,10 @@ export const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="py-8 border-t border-border">
+    <footer className="py-8 border-t border-border" role="contentinfo">
       <div className="container mx-auto px-4">
         <div className="text-center text-sm text-muted-foreground">
-          {t('footer.tagline')}
+          <p>{t('footer.tagline')}</p>
         </div>
       </div>
     </footer>

@@ -144,6 +144,9 @@ export const AppsPortfolio = () => {
                       src={app.image} 
                       alt={t(`appsPortfolio.apps.${app.key}.title`)}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
+                      width="640"
+                      height="360"
                     />
                     <div className={`absolute inset-0 bg-gradient-to-br ${app.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-300`} />
                     <div className="absolute top-4 right-4">

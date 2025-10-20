@@ -1,5 +1,3 @@
-"use client";
-
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -89,6 +87,7 @@ export const AnimatedCertificates = ({
                     alt={certificate.title}
                     draggable={false}
                     className="h-full w-full rounded-3xl object-cover object-center shadow-2xl border border-border"
+                    loading="lazy"
                   />
                 </motion.div>
               ))}

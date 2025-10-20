@@ -45,6 +45,7 @@ export const Header = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-background/80 backdrop-blur-lg shadow-sm' : 'bg-transparent'
       }`}
+      role="banner"
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -52,13 +53,14 @@ export const Header = () => {
           <button
             onClick={() => scrollToSection('home')}
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            aria-label="Yahya Houssini Home"
           >
-            <img src="/logo.png" alt="Yahya Houssini" className="h-10 w-10" />
+            <img src="/logo.png" alt="Yahya Houssini Logo - Web Developer and Branding Agency" className="h-10 w-10" loading="eager" width="40" height="40" />
             <span className="text-xl font-bold text-foreground">yahya.</span>
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8" role="navigation" aria-label="Main navigation">
             {navItems.map((item) => (
               <button
                 key={item.key}
@@ -102,6 +104,8 @@ export const Header = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden p-2"
+            aria-label="Toggle mobile menu"
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

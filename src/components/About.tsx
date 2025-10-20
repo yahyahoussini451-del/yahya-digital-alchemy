@@ -33,8 +33,11 @@ export const About = () => {
               <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
                 <img
                   src={profileImage}
-                  alt="Yahya Houssini"
+                  alt="Yahya Houssini - Professional Web Developer and Branding Expert in Morocco"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  width="600"
+                  height="600"
                 />
               </div>
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[hsl(330,81%,60%)] to-[hsl(340,82%,52%)] opacity-0 group-hover:opacity-10 transition-opacity duration-300" />

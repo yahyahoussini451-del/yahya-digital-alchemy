@@ -119,7 +119,7 @@ export const Contact = () => {
                 variant="outline"
                 size="lg"
                 className="mb-8"
-                onClick={() => window.open('https://wa.me/212000000000', '_blank')}
+                onClick={() => window.open('https://wa.me/212703026422', '_blank')}
               >
                 <MessageSquare className="w-5 h-5 mr-2" />
                 {t('contact.whatsapp')}

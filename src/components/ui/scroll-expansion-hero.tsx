@@ -227,6 +227,8 @@ const ScrollExpandMedia = ({
                       src={mediaSrc}
                       alt={title || 'Media content'}
                       className='w-full h-full object-cover rounded-xl'
+                      loading="eager"
+                      fetchPriority="high"
                     />
 
                     <motion.div
