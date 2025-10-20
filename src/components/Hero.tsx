@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import ScrollExpandMedia from '@/components/ui/scroll-expansion-hero';
+import heroSpeaking from '@/assets/hero-speaking.png';
 
 export const Hero = () => {
   const { t } = useTranslation();
@@ -21,7 +22,7 @@ export const Hero = () => {
     <section id="home">
       <ScrollExpandMedia
         mediaType="image"
-        mediaSrc="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?q=80&w=1280&auto=format&fit=crop"
+        mediaSrc={heroSpeaking}
         bgImageSrc="https://images.unsplash.com/photo-1541410965313-d53b3c16ef17?q=80&w=1920&auto=format&fit=crop"
         title="Build Intelligent Digital Experiences."
         subtitle="Full Stack Developer & Media Buyer Expert — combining technology and strategy to help brands grow."
