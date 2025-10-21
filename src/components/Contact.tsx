@@ -7,6 +7,14 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
+import { z } from 'zod';
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  message: z.string().trim().min(1, "Message is required").max(1000, "Message must be less than 1000 characters")
+});
 
 export const Contact = () => {
   const { t } = useTranslation();
@@ -19,22 +27,55 @@ export const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      message: formData.get('message') as string,
+    };
+
+    try {
+      // Validate input
+      const validatedData = contactSchema.parse(data);
+      
+      // Send email via edge function
+      const { error } = await supabase.functions.invoke('send-contact-email', {
+        body: validatedData
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+      
+      (e.target as HTMLFormElement).reset();
+    } catch (error) {
+      console.error('Error sending message:', error);
+      
+      if (error instanceof z.ZodError) {
+        toast({
+          title: "Validation Error",
+          description: error.errors[0].message,
+          variant: "destructive",
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: "Failed to send message. Please try again or contact me directly via WhatsApp.",
+          variant: "destructive",
+        });
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const socialLinks = [
-    { icon: Github, url: '#', label: 'GitHub' },
-    { icon: Linkedin, url: '#', label: 'LinkedIn' },
-    { icon: Instagram, url: '#', label: 'Instagram' }
+    { icon: Github, url: 'https://github.com/yahyahoussini', label: 'GitHub' },
+    { icon: Linkedin, url: 'https://www.linkedin.com/in/yahyahoussini', label: 'LinkedIn' },
+    { icon: Instagram, url: 'https://www.instagram.com/yahyahoussini', label: 'Instagram' }
   ];
 
   return (
@@ -76,23 +117,29 @@ export const Contact = () => {
                 <div>
                   <Input
                     type="text"
+                    name="name"
                     placeholder={t('contact.name')}
                     required
+                    maxLength={100}
                     className="h-12"
                   />
                 </div>
                 <div>
                   <Input
                     type="email"
+                    name="email"
                     placeholder={t('contact.email')}
                     required
+                    maxLength={255}
                     className="h-12"
                   />
                 </div>
                 <div>
                   <Textarea
+                    name="message"
                     placeholder={t('contact.message')}
                     required
+                    maxLength={1000}
                     rows={6}
                     className="resize-none"
                   />
