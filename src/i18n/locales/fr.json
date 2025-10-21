@@ -206,6 +206,96 @@
     "send": "Envoyer le Message",
     "whatsapp": "WhatsApp"
   },
+  "blog": {
+    "title": "Blog & Perspectives",
+    "subtitle": "Réflexions sur la technologie, la stratégie d'entreprise et l'innovation",
+    "readMore": "Lire Plus",
+    "categories": {
+      "ai": "IA & Automatisation",
+      "development": "Développement",
+      "business": "Stratégie d'Entreprise",
+      "design": "Design & Branding"
+    },
+    "posts": {
+      "aiWhatsapp": {
+        "title": "Créer des Assistants de Vente WhatsApp IA",
+        "excerpt": "Comment nous avons développé des agents IA multilingues qui ont augmenté les taux de conversion de 200% pour les entreprises marocaines avec GPT-4.",
+        "date": "15 Jan 2025"
+      },
+      "saasArchitecture": {
+        "title": "Mise à l'Échelle d'Applications SaaS: Meilleures Pratiques",
+        "excerpt": "Plongée dans la construction de plateformes SaaS multi-tenants évolutives servant des milliers d'utilisateurs sans compromettre performance ou sécurité.",
+        "date": "10 Jan 2025"
+      },
+      "mediaBuying": {
+        "title": "Achat Média axé ROI: Stratégie Meta Ads",
+        "excerpt": "Apprenez le cadre éprouvé pour atteindre 5x ROAS sur les campagnes Meta Ads via optimisation basée sur les données et tests créatifs.",
+        "date": "5 Jan 2025"
+      },
+      "brandIdentity": {
+        "title": "Créer des Identités de Marque Mémorables en 2025",
+        "excerpt": "Le processus complet de développement d'identités visuelles fortes qui résonnent avec les audiences modernes.",
+        "date": "28 Déc 2024"
+      }
+    }
+  },
+  "caseStudies": {
+    "title": "Études de Cas",
+    "subtitle": "Résultats réels de projets réels — découvrez comment nous résolvons des défis complexes",
+    "challengeLabel": "Défi",
+    "solutionLabel": "Solution",
+    "resultsLabel": "Résultats",
+    "studies": {
+      "ecommerce": {
+        "title": "Transformation Plateforme E-Commerce",
+        "client": "Détaillant de Mode Marocain",
+        "industry": "E-Commerce",
+        "description": "Transformation numérique complète d'une entreprise de vente au détail traditionnelle en un marché en ligne prospère.",
+        "challenge": "Le client n'avait aucune présence en ligne et devait concurrencer des marques e-commerce établies. Solution complète nécessaire avec gestion des stocks, traitement des paiements et automatisation marketing.",
+        "solution": "Création d'une plateforme e-commerce React personnalisée avec backend Node.js, intégrée aux passerelles de paiement locales, recommandations de produits IA, email marketing automatisé et intégration réseaux sociaux.",
+        "results": {
+          "sales": "+250%",
+          "salesLabel": "Croissance des Ventes",
+          "users": "15K+",
+          "usersLabel": "Utilisateurs Actifs",
+          "conversion": "3.8%",
+          "conversionLabel": "Taux de Conversion"
+        }
+      },
+      "healthcare": {
+        "title": "Système de Gestion de Cabinet Médical",
+        "client": "Centre Dentaire Privé",
+        "industry": "Santé",
+        "description": "Solution SaaS complète pour gérer plusieurs cliniques dentaires avec tableau de bord centralisé.",
+        "challenge": "Planification manuelle des rendez-vous, dossiers patients papier, aucune visibilité entre les cliniques. Personnel passait des heures sur tâches administratives.",
+        "solution": "Développement d'un système de gestion dentaire cloud avec planification temps réel, dossiers patients numériques, rappels automatisés et tableaux de bord BI.",
+        "results": {
+          "patients": "5K+",
+          "patientsLabel": "Patients Gérés",
+          "efficiency": "+60%",
+          "efficiencyLabel": "Efficacité Personnel",
+          "costs": "-40%",
+          "costsLabel": "Coûts Admin"
+        }
+      },
+      "aibot": {
+        "title": "Assistant de Vente WhatsApp IA",
+        "client": "Agence Immobilière",
+        "industry": "PropTech",
+        "description": "Bot WhatsApp IA multilingue pour demandes immobilières et qualification de prospects 24/7.",
+        "challenge": "Prospects perdus après les heures d'ouverture, difficulté à gérer demandes arabe/français/anglais, équipe submergée par questions basiques.",
+        "solution": "Chatbot GPT-4 intégré à l'API WhatsApp Business, formé sur base de données immobilières, capable de répondre en 3 langues, planifier visites et qualifier prospects.",
+        "results": {
+          "response": "24/7",
+          "responseLabel": "Réponse Instantanée",
+          "leads": "+180%",
+          "leadsLabel": "Prospects Qualifiés",
+          "automation": "85%",
+          "automationLabel": "Requêtes Automatisées"
+        }
+      }
+    }
+  },
   "footer": {
     "tagline": "© 2025 Yahya Houssini — Construit avec passion et précision."
   }

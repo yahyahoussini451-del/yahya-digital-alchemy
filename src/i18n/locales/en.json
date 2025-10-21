@@ -206,6 +206,96 @@
     "send": "Send Message",
     "whatsapp": "WhatsApp Me"
   },
+  "blog": {
+    "title": "Blog & Insights",
+    "subtitle": "Thoughts on technology, business strategy, and innovation",
+    "readMore": "Read More",
+    "categories": {
+      "ai": "AI & Automation",
+      "development": "Development",
+      "business": "Business Strategy",
+      "design": "Design & Branding"
+    },
+    "posts": {
+      "aiWhatsapp": {
+        "title": "Building AI-Powered WhatsApp Sales Assistants",
+        "excerpt": "How we developed multilingual AI agents that increased conversion rates by 200% for Moroccan businesses using GPT-4 and custom training.",
+        "date": "Jan 15, 2025"
+      },
+      "saasArchitecture": {
+        "title": "Scaling SaaS Applications: Architecture Best Practices",
+        "excerpt": "Deep dive into building scalable multi-tenant SaaS platforms that serve thousands of users without compromising performance or security.",
+        "date": "Jan 10, 2025"
+      },
+      "mediaBuying": {
+        "title": "ROI-Focused Media Buying: Meta Ads Strategy",
+        "excerpt": "Learn the proven framework we use to achieve 5x ROAS on Meta Ads campaigns through data-driven optimization and creative testing.",
+        "date": "Jan 5, 2025"
+      },
+      "brandIdentity": {
+        "title": "Creating Memorable Brand Identities in 2025",
+        "excerpt": "The complete process of developing strong visual identities that resonate with modern audiences and stand out in crowded markets.",
+        "date": "Dec 28, 2024"
+      }
+    }
+  },
+  "caseStudies": {
+    "title": "Case Studies",
+    "subtitle": "Real results from real projects — explore how we solve complex challenges",
+    "challengeLabel": "Challenge",
+    "solutionLabel": "Solution",
+    "resultsLabel": "Results",
+    "studies": {
+      "ecommerce": {
+        "title": "E-Commerce Platform Transformation",
+        "client": "Moroccan Fashion Retailer",
+        "industry": "E-Commerce",
+        "description": "Complete digital transformation of a traditional retail business into a thriving online marketplace.",
+        "challenge": "The client had zero online presence and needed to compete with established e-commerce brands. They required a full-stack solution with inventory management, payment processing, and marketing automation.",
+        "solution": "Built a custom React-based e-commerce platform with Node.js backend, integrated with local payment gateways, and implemented AI-powered product recommendations. Added automated email marketing and social media integration.",
+        "results": {
+          "sales": "+250%",
+          "salesLabel": "Sales Growth",
+          "users": "15K+",
+          "usersLabel": "Active Users",
+          "conversion": "3.8%",
+          "conversionLabel": "Conversion Rate"
+        }
+      },
+      "healthcare": {
+        "title": "Medical Practice Management System",
+        "client": "Private Dental Center",
+        "industry": "Healthcare",
+        "description": "Comprehensive SaaS solution for managing multiple dental clinic locations with centralized dashboard.",
+        "challenge": "Manual appointment scheduling, paper-based patient records, and no visibility across multiple clinic locations. Staff spent hours on administrative tasks instead of patient care.",
+        "solution": "Developed a cloud-based dental management system with real-time appointment scheduling, digital patient records, automated reminders, and business intelligence dashboards for management insights.",
+        "results": {
+          "patients": "5K+",
+          "patientsLabel": "Patients Managed",
+          "efficiency": "+60%",
+          "efficiencyLabel": "Staff Efficiency",
+          "costs": "-40%",
+          "costsLabel": "Admin Costs"
+        }
+      },
+      "aibot": {
+        "title": "AI WhatsApp Sales Assistant",
+        "client": "Real Estate Agency",
+        "industry": "PropTech",
+        "description": "Multilingual AI-powered WhatsApp bot for 24/7 property inquiries and lead qualification.",
+        "challenge": "Missing leads after business hours, difficulty managing Arabic/French/English inquiries, and sales team overwhelmed with basic questions instead of closing deals.",
+        "solution": "Integrated GPT-4 powered chatbot with WhatsApp Business API, trained on property database, capable of answering questions in 3 languages, scheduling viewings, and qualifying leads automatically.",
+        "results": {
+          "response": "24/7",
+          "responseLabel": "Instant Response",
+          "leads": "+180%",
+          "leadsLabel": "Qualified Leads",
+          "automation": "85%",
+          "automationLabel": "Queries Automated"
+        }
+      }
+    }
+  },
   "footer": {
     "tagline": "© 2025 Yahya Houssini — Built with passion and precision."
   }
