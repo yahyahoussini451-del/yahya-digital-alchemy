@@ -138,7 +138,13 @@ export const AppsPortfolio = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="overflow-hidden group hover:shadow-xl transition-all duration-300 border-primary/10 h-full">
+                <a 
+                  href="https://brandhub.ma/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block h-full"
+                >
+                  <Card className="overflow-hidden group hover:shadow-xl transition-all duration-300 border-primary/10 h-full cursor-pointer">
                   <div className="relative overflow-hidden aspect-video">
                     <img 
                       src={app.image} 
@@ -167,6 +173,7 @@ export const AppsPortfolio = () => {
                     </p>
                   </CardContent>
                 </Card>
+                </a>
               </motion.div>
             );
           })}
