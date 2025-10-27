@@ -9,20 +9,12 @@ export const Testimonials = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const testimonials = [
-    {
-      quote: t('testimonials.quote1'),
-      author: 'Sarah Johnson',
-      role: 'CEO, TechStartup',
-      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah'
-    },
-    {
-      quote: t('testimonials.quote2'),
-      author: 'Ahmed Benali',
-      role: 'Founder, Digital Agency',
-      avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Ahmed'
-    }
-  ];
+  const testimonials = Array.from({ length: 19 }, (_, i) => ({
+    quote: t(`testimonials.quote${i + 1}`),
+    author: t(`testimonials.author${i + 1}`),
+    role: t(`testimonials.role${i + 1}`),
+    avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=Customer${i + 1}`
+  }));
 
   return (
     <section id="testimonials" className="py-20 md:py-32">
@@ -37,29 +29,29 @@ export const Testimonials = () => {
             {t('testimonials.title')}
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-card rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300 relative"
+                className="bg-card rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 relative"
               >
-                <Quote className="absolute top-6 right-6 w-12 h-12 text-accent/20" />
+                <Quote className="absolute top-4 right-4 w-10 h-10 text-accent/20" />
                 <div className="relative z-10">
-                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed italic">
+                  <p className="text-base text-muted-foreground mb-4 leading-relaxed italic line-clamp-4">
                     "{testimonial.quote}"
                   </p>
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-3">
                     <img
                       src={testimonial.avatar}
                       alt={testimonial.author}
-                      className="w-12 h-12 rounded-full"
+                      className="w-10 h-10 rounded-full"
                     />
                     <div>
-                      <div className="font-semibold">{testimonial.author}</div>
-                      <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                      <div className="font-semibold text-sm">{testimonial.author}</div>
+                      <div className="text-xs text-muted-foreground">{testimonial.role}</div>
                     </div>
                   </div>
                 </div>

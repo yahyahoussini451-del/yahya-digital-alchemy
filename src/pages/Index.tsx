@@ -6,7 +6,6 @@ import { Innovation3D } from '@/components/Innovation3D';
 import { AppsPortfolio } from '@/components/AppsPortfolio';
 import { Projects } from '@/components/Projects';
 import { Services } from '@/components/Services';
-import { Pricing } from '@/components/Pricing';
 import { Blog } from '@/components/Blog';
 import { CaseStudies } from '@/components/CaseStudies';
 import { Certifications } from '@/components/Certifications';
@@ -27,7 +26,6 @@ const Index = () => {
         <AppsPortfolio />
         <Projects />
         <Services />
-        <Pricing />
         <Blog />
         <CaseStudies />
         <Certifications />
