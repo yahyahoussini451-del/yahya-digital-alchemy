@@ -73,7 +73,8 @@
       "realestate": "Real Estate",
       "hospitality": "Hospitality",
       "logistics": "Logistics & Delivery",
-      "fintech": "Financial Technology"
+      "fintech": "Financial Technology",
+      "ai": "AI & Machine Learning"
     },
     "apps": {
       "ecommerceApp": {
@@ -123,6 +124,66 @@
       "events": {
         "title": "Event Management Platform",
         "description": "Complete event planning solution with venue booking, guest management, and vendor coordination"
+      },
+      "crm": {
+        "title": "CRM Solution",
+        "description": "Customer relationship management system with sales pipeline and analytics"
+      },
+      "project": {
+        "title": "Project Management",
+        "description": "Kanban boards, task tracking, and team collaboration platform"
+      },
+      "hr": {
+        "title": "HR Management",
+        "description": "Employee management, payroll, attendance tracking, and recruitment"
+      },
+      "inventory": {
+        "title": "Inventory System",
+        "description": "Warehouse management with stock tracking and barcode scanning"
+      },
+      "aichat": {
+        "title": "AI Chatbot",
+        "description": "ChatGPT-like conversational AI assistant for customer support"
+      },
+      "aiimage": {
+        "title": "AI Image Generator",
+        "description": "AI-powered image creation and editing platform"
+      },
+      "sales": {
+        "title": "Sales Pipeline",
+        "description": "Deal tracking, revenue forecasting, and sales funnel management"
+      },
+      "support": {
+        "title": "Customer Support",
+        "description": "Ticket management, live chat, and help desk platform"
+      },
+      "workflow": {
+        "title": "Workflow Automation",
+        "description": "Process automation with visual flowchart builder"
+      },
+      "aidoc": {
+        "title": "AI Document Analyzer",
+        "description": "AI-powered document processing and data extraction"
+      },
+      "collaboration": {
+        "title": "Team Collaboration",
+        "description": "Shared workspace with file sharing, chat, and video calls"
+      },
+      "invoice": {
+        "title": "Invoice Management",
+        "description": "Billing, invoicing, and payment tracking system"
+      },
+      "leads": {
+        "title": "Lead Management",
+        "description": "Lead scoring, contact database, and conversion tracking"
+      },
+      "aicontent": {
+        "title": "AI Content Writer",
+        "description": "AI-powered content generation and blog writing assistant"
+      },
+      "analytics": {
+        "title": "Business Analytics",
+        "description": "Data visualization, KPI dashboards, and business intelligence"
       }
     }
   },

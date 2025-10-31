@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ShoppingCart, BarChart3, Coffee, Scale, Stethoscope, GraduationCap, Building2, Hotel, Truck, Wallet, Dumbbell, Calendar } from 'lucide-react';
+import { ShoppingCart, BarChart3, Coffee, Scale, Stethoscope, GraduationCap, Building2, Hotel, Truck, Wallet, Dumbbell, Calendar, Users, FolderKanban, UserCog, Package, Bot, Wand2, TrendingUp, Headphones, Workflow, FileSearch, MessageSquare, FileText, Target, PenTool, PieChart } from 'lucide-react';
 
 import ecommerceApp from '@/assets/app-ecommerce-moroccan.jpg';
 import dashboard from '@/assets/app-dashboard-moroccan.jpg';
@@ -18,6 +18,21 @@ import logistics from '@/assets/app-logistics-moroccan.jpg';
 import fintech from '@/assets/app-fintech-moroccan.jpg';
 import fitness from '@/assets/app-fitness-moroccan.jpg';
 import events from '@/assets/app-events-moroccan.jpg';
+import crm from '@/assets/app-crm-moroccan.jpg';
+import project from '@/assets/app-project-moroccan.jpg';
+import hr from '@/assets/app-hr-moroccan.jpg';
+import inventory from '@/assets/app-inventory-moroccan.jpg';
+import aichat from '@/assets/app-aichat-moroccan.jpg';
+import aiimage from '@/assets/app-aiimage-moroccan.jpg';
+import sales from '@/assets/app-sales-moroccan.jpg';
+import support from '@/assets/app-support-moroccan.jpg';
+import workflow from '@/assets/app-workflow-moroccan.jpg';
+import aidoc from '@/assets/app-aidoc-moroccan.jpg';
+import collaboration from '@/assets/app-collaboration-moroccan.jpg';
+import invoice from '@/assets/app-invoice-moroccan.jpg';
+import leads from '@/assets/app-leads-moroccan.jpg';
+import aicontent from '@/assets/app-aicontent-moroccan.jpg';
+import analytics from '@/assets/app-analytics-moroccan.jpg';
 
 export const AppsPortfolio = () => {
   const { t } = useTranslation();
@@ -108,6 +123,111 @@ export const AppsPortfolio = () => {
       icon: Calendar,
       category: 'business',
       gradient: 'from-violet-500 to-fuchsia-600'
+    },
+    {
+      key: 'crm',
+      image: crm,
+      icon: Users,
+      category: 'business',
+      gradient: 'from-blue-600 to-cyan-500'
+    },
+    {
+      key: 'project',
+      image: project,
+      icon: FolderKanban,
+      category: 'business',
+      gradient: 'from-orange-600 to-red-500'
+    },
+    {
+      key: 'hr',
+      image: hr,
+      icon: UserCog,
+      category: 'business',
+      gradient: 'from-teal-500 to-emerald-600'
+    },
+    {
+      key: 'inventory',
+      image: inventory,
+      icon: Package,
+      category: 'business',
+      gradient: 'from-gray-600 to-slate-700'
+    },
+    {
+      key: 'aichat',
+      image: aichat,
+      icon: Bot,
+      category: 'ai',
+      gradient: 'from-purple-600 to-pink-500'
+    },
+    {
+      key: 'aiimage',
+      image: aiimage,
+      icon: Wand2,
+      category: 'ai',
+      gradient: 'from-fuchsia-500 to-pink-600'
+    },
+    {
+      key: 'sales',
+      image: sales,
+      icon: TrendingUp,
+      category: 'business',
+      gradient: 'from-amber-600 to-orange-700'
+    },
+    {
+      key: 'support',
+      image: support,
+      icon: Headphones,
+      category: 'business',
+      gradient: 'from-cyan-500 to-teal-600'
+    },
+    {
+      key: 'workflow',
+      image: workflow,
+      icon: Workflow,
+      category: 'business',
+      gradient: 'from-indigo-600 to-blue-700'
+    },
+    {
+      key: 'aidoc',
+      image: aidoc,
+      icon: FileSearch,
+      category: 'ai',
+      gradient: 'from-blue-700 to-indigo-800'
+    },
+    {
+      key: 'collaboration',
+      image: collaboration,
+      icon: MessageSquare,
+      category: 'business',
+      gradient: 'from-violet-600 to-purple-700'
+    },
+    {
+      key: 'invoice',
+      image: invoice,
+      icon: FileText,
+      category: 'business',
+      gradient: 'from-orange-500 to-red-600'
+    },
+    {
+      key: 'leads',
+      image: leads,
+      icon: Target,
+      category: 'business',
+      gradient: 'from-green-600 to-teal-700'
+    },
+    {
+      key: 'aicontent',
+      image: aicontent,
+      icon: PenTool,
+      category: 'ai',
+      gradient: 'from-pink-600 to-rose-700'
+    },
+    {
+      key: 'analytics',
+      image: analytics,
+      icon: PieChart,
+      category: 'business',
+      gradient: 'from-slate-700 to-gray-800'
     }
   ];
 

@@ -73,7 +73,8 @@
       "realestate": "Immobilier",
       "hospitality": "Hôtellerie",
       "logistics": "Logistique & Livraison",
-      "fintech": "Technologie Financière"
+      "fintech": "Technologie Financière",
+      "ai": "IA & Apprentissage Automatique"
     },
     "apps": {
       "ecommerceApp": {
@@ -123,6 +124,66 @@
       "events": {
         "title": "Plateforme de Gestion d'Événements",
         "description": "Solution complète de planification d'événements avec réservation de lieu et coordination"
+      },
+      "crm": {
+        "title": "Solution CRM",
+        "description": "Système de gestion de la relation client avec pipeline de ventes et analyses"
+      },
+      "project": {
+        "title": "Gestion de Projets",
+        "description": "Tableaux Kanban, suivi des tâches et plateforme de collaboration d'équipe"
+      },
+      "hr": {
+        "title": "Gestion RH",
+        "description": "Gestion des employés, paie, suivi des présences et recrutement"
+      },
+      "inventory": {
+        "title": "Système d'Inventaire",
+        "description": "Gestion d'entrepôt avec suivi des stocks et scan de codes-barres"
+      },
+      "aichat": {
+        "title": "Chatbot IA",
+        "description": "Assistant IA conversationnel type ChatGPT pour le support client"
+      },
+      "aiimage": {
+        "title": "Générateur d'Images IA",
+        "description": "Plateforme de création et d'édition d'images par IA"
+      },
+      "sales": {
+        "title": "Pipeline de Ventes",
+        "description": "Suivi des affaires, prévisions de revenus et gestion du funnel de vente"
+      },
+      "support": {
+        "title": "Support Client",
+        "description": "Gestion des tickets, chat en direct et plateforme d'assistance"
+      },
+      "workflow": {
+        "title": "Automatisation des Workflows",
+        "description": "Automatisation des processus avec constructeur visuel de diagrammes"
+      },
+      "aidoc": {
+        "title": "Analyseur de Documents IA",
+        "description": "Traitement de documents et extraction de données par IA"
+      },
+      "collaboration": {
+        "title": "Collaboration d'Équipe",
+        "description": "Espace de travail partagé avec partage de fichiers, chat et appels vidéo"
+      },
+      "invoice": {
+        "title": "Gestion de Factures",
+        "description": "Système de facturation, facturation et suivi des paiements"
+      },
+      "leads": {
+        "title": "Gestion de Leads",
+        "description": "Scoring de leads, base de contacts et suivi des conversions"
+      },
+      "aicontent": {
+        "title": "Rédacteur de Contenu IA",
+        "description": "Génération de contenu et assistant d'écriture de blog par IA"
+      },
+      "analytics": {
+        "title": "Analyse d'Affaires",
+        "description": "Visualisation de données, tableaux de bord KPI et intelligence d'affaires"
       }
     }
   },
