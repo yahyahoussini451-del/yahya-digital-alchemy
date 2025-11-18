@@ -18,7 +18,8 @@ import {
   SiMysql,
   SiOpenai,
   SiN8N,
-  SiShopify
+  SiShopify,
+  SiBlender
 } from 'react-icons/si';
 
 export const TrustBar = () => {
@@ -41,8 +42,9 @@ export const TrustBar = () => {
     { icon: SiMongodb, name: 'MongoDB', color: '#47A248' },
     { icon: SiMysql, name: 'MySQL', color: '#4479A1' },
     { icon: SiOpenai, name: 'LLMs & AI', color: '#412991' },
-    { icon: SiN8N, name: 'Automation (n8n)', color: '#EA4B71' },
-    { icon: SiShopify, name: 'E-commerce', color: '#96BF48' }
+    { icon: SiN8N, name: 'Automation', color: '#EA4B71' },
+    { icon: SiShopify, name: 'E-commerce', color: '#96BF48' },
+    { icon: SiBlender, name: '3D for Ads', color: '#F5792A' }
   ];
 
   return (
@@ -62,7 +64,7 @@ export const TrustBar = () => {
 
         <div className="relative overflow-hidden">
           <motion.div
-            className="flex gap-8 items-center justify-center flex-wrap"
+            className="flex gap-8 gap-y-6 items-center justify-center flex-wrap"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
