@@ -1,10 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useInView } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ShoppingCart, BarChart3, Coffee, Scale, Stethoscope, GraduationCap, Building2, Hotel, Truck, Wallet, Dumbbell, Calendar, Users, FolderKanban, UserCog, Package, Bot, Wand2, TrendingUp, Headphones, Workflow, FileSearch, MessageSquare, FileText, Target, PenTool, PieChart } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { ShoppingCart, BarChart3, Coffee, Scale, Stethoscope, GraduationCap, Building2, Hotel, Truck, Wallet, Dumbbell, Calendar, Users, FolderKanban, UserCog, Package, Bot, Wand2, TrendingUp, Headphones, Workflow, FileSearch, MessageSquare, FileText, Target, PenTool, PieChart, Search } from 'lucide-react';
 
 import ecommerceApp from '@/assets/app-ecommerce-moroccan.jpg';
 import dashboard from '@/assets/app-dashboard-moroccan.jpg';
@@ -38,6 +40,8 @@ export const AppsPortfolio = () => {
   const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   const apps = [
     {
@@ -231,6 +235,15 @@ export const AppsPortfolio = () => {
     }
   ];
 
+  const categories = ['all', 'business', 'ecommerce', 'healthcare', 'education', 'realestate', 'hospitality', 'logistics', 'fintech', 'fitness', 'events', 'ai'];
+
+  const filteredApps = apps.filter(app => {
+    const matchesSearch = t(`appsPortfolio.apps.${app.key}.title`).toLowerCase().includes(searchTerm.toLowerCase()) ||
+                          t(`appsPortfolio.apps.${app.key}.description`).toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || app.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30" ref={ref}>
       <div className="max-w-7xl mx-auto">
@@ -248,8 +261,49 @@ export const AppsPortfolio = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {apps.map((app, index) => {
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mt-12 space-y-6"
+        >
+          <div className="relative max-w-md mx-auto">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <Input
+              type="text"
+              placeholder={t('appsPortfolio.searchPlaceholder')}
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="pl-10"
+            />
+          </div>
+
+          <div className="flex flex-wrap gap-2 justify-center">
+            {categories.map((category) => (
+              <Button
+                key={category}
+                variant={selectedCategory === category ? "default" : "outline"}
+                size="sm"
+                onClick={() => setSelectedCategory(category)}
+                className="capitalize"
+              >
+                {t(`appsPortfolio.categories.${category}`)}
+              </Button>
+            ))}
+          </div>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+          {filteredApps.length === 0 ? (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="col-span-full text-center py-12"
+            >
+              <p className="text-muted-foreground text-lg">{t('appsPortfolio.noResults')}</p>
+            </motion.div>
+          ) : (
+            filteredApps.map((app, index) => {
             const Icon = app.icon;
             return (
               <motion.div
@@ -292,11 +346,12 @@ export const AppsPortfolio = () => {
                       {t(`appsPortfolio.apps.${app.key}.description`)}
                     </p>
                   </CardContent>
-                </Card>
+                 </Card>
                 </a>
               </motion.div>
             );
-          })}
+          })
+          )}
         </div>
       </div>
     </section>
