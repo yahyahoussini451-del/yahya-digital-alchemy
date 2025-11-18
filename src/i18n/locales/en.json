@@ -65,7 +65,10 @@
   "appsPortfolio": {
     "title": "Apps I've Built",
     "subtitle": "Real-world applications serving Moroccan businesses",
+    "searchPlaceholder": "Search apps...",
+    "noResults": "No apps found matching your criteria",
     "categories": {
+      "all": "All",
       "ecommerce": "E-Commerce Solutions",
       "business": "Business Management",
       "healthcare": "Healthcare Systems",

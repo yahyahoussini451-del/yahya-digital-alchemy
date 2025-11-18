@@ -65,7 +65,10 @@
   "appsPortfolio": {
     "title": "Applications que j'ai Créées",
     "subtitle": "Applications réelles au service des entreprises marocaines",
+    "searchPlaceholder": "Rechercher des applications...",
+    "noResults": "Aucune application trouvée correspondant à vos critères",
     "categories": {
+      "all": "Tout",
       "ecommerce": "Solutions E-Commerce",
       "business": "Gestion d'Entreprise",
       "healthcare": "Systèmes de Santé",
