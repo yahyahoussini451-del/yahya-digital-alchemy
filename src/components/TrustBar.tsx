@@ -2,15 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { 
   SiReact, 
-  SiTailwindcss, 
-  SiTypescript, 
   SiNodedotjs, 
-  SiPython,
-  SiGoogleanalytics,
-  SiFigma,
-  SiSupabase,
-  SiVercel,
-  SiGit,
   SiMeta,
   SiGoogleads,
   SiGooglesearchconsole,
@@ -27,18 +19,10 @@ export const TrustBar = () => {
 
   const technologies = [
     { icon: SiReact, name: 'React.js', color: '#61DAFB' },
-    { icon: SiTailwindcss, name: 'Tailwind CSS', color: '#06B6D4' },
-    { icon: SiTypescript, name: 'TypeScript', color: '#3178C6' },
     { icon: SiNodedotjs, name: 'Node.js', color: '#339933' },
-    { icon: SiPython, name: 'Python', color: '#3776AB' },
-    { icon: SiGoogleanalytics, name: 'Google Analytics', color: '#E37400' },
-    { icon: SiFigma, name: 'Figma', color: '#F24E1E' },
-    { icon: SiSupabase, name: 'Supabase', color: '#3ECF8E' },
-    { icon: SiVercel, name: 'Vercel', color: '#000000' },
-    { icon: SiGit, name: 'Git', color: '#F05032' },
     { icon: SiMeta, name: 'Meta Ads', color: '#0668E1' },
     { icon: SiGoogleads, name: 'Google Ads', color: '#4285F4' },
-    { icon: SiGooglesearchconsole, name: 'Google SEO', color: '#4285F4' },
+    { icon: SiGooglesearchconsole, name: 'Google SEO', color: '#4585F4' },
     { icon: SiMongodb, name: 'MongoDB', color: '#47A248' },
     { icon: SiMysql, name: 'MySQL', color: '#4479A1' },
     { icon: SiOpenai, name: 'LLMs & AI', color: '#412991' },
@@ -64,7 +48,7 @@ export const TrustBar = () => {
 
         <div className="relative overflow-hidden">
           <motion.div
-            className="flex gap-8 gap-y-6 items-center justify-center flex-wrap"
+            className="flex gap-8 gap-y-8 items-center justify-center flex-wrap"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
