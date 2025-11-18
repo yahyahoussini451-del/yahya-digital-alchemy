@@ -19,4 +19,16 @@ i18n
     }
   });
 
+// RTL support - automatically switch direction when language changes
+i18n.on('languageChanged', (lng) => {
+  const dir = lng === 'ar' ? 'rtl' : 'ltr';
+  document.documentElement.dir = dir;
+  document.documentElement.lang = lng;
+});
+
+// Set initial direction
+const initialDir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+document.documentElement.dir = initialDir;
+document.documentElement.lang = i18n.language;
+
 export default i18n;
