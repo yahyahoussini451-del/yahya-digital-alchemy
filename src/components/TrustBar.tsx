@@ -10,7 +10,15 @@ import {
   SiFigma,
   SiSupabase,
   SiVercel,
-  SiGit
+  SiGit,
+  SiMeta,
+  SiGoogleads,
+  SiGooglesearchconsole,
+  SiMongodb,
+  SiMysql,
+  SiOpenai,
+  SiN8N,
+  SiShopify
 } from 'react-icons/si';
 
 export const TrustBar = () => {
@@ -26,7 +34,15 @@ export const TrustBar = () => {
     { icon: SiFigma, name: 'Figma', color: '#F24E1E' },
     { icon: SiSupabase, name: 'Supabase', color: '#3ECF8E' },
     { icon: SiVercel, name: 'Vercel', color: '#000000' },
-    { icon: SiGit, name: 'Git', color: '#F05032' }
+    { icon: SiGit, name: 'Git', color: '#F05032' },
+    { icon: SiMeta, name: 'Meta Ads', color: '#0668E1' },
+    { icon: SiGoogleads, name: 'Google Ads', color: '#4285F4' },
+    { icon: SiGooglesearchconsole, name: 'Google SEO', color: '#4285F4' },
+    { icon: SiMongodb, name: 'MongoDB', color: '#47A248' },
+    { icon: SiMysql, name: 'MySQL', color: '#4479A1' },
+    { icon: SiOpenai, name: 'LLMs & AI', color: '#412991' },
+    { icon: SiN8N, name: 'Automation (n8n)', color: '#EA4B71' },
+    { icon: SiShopify, name: 'E-commerce', color: '#96BF48' }
   ];
 
   return (
