@@ -417,5 +417,67 @@
   },
   "footer": {
     "tagline": "© 2025 Yahya Houssini — Built with passion and precision."
+  },
+  "seo": {
+    "region": "Morocco • France • Middle East",
+    "defaultTitle": "Yahya Loutfi - Full Stack Developer & SEO Expert | Morocco, France, Middle East",
+    "defaultDescription": "Expert Full Stack Developer & Media Buyer specializing in React, AI integration, and SEO optimization. Serving Morocco, France, and Middle East with cutting-edge web solutions.",
+    "defaultKeywords": "web developer morocco, full stack developer france, seo expert middle east, react developer, ai integration, ecommerce development, digital marketing morocco"
+  },
+  "trustBar": {
+    "title": "Technologies & Tools I Master",
+    "subtitle": "Building world-class solutions with industry-leading technologies"
+  },
+  "eeat": {
+    "title": "Why Choose Me",
+    "subtitle": "Proven track record of delivering exceptional results for businesses across Morocco, France, and the Middle East",
+    "experience": {
+      "title": "Experience",
+      "value": "5+ Years",
+      "description": "Active in web development and digital marketing since 2019, with hundreds of successful projects delivered."
+    },
+    "expertise": {
+      "title": "Expertise",
+      "value": "Certified",
+      "description": "Google BI & Data Analytics certified professional with deep expertise in React, AI, and SEO optimization."
+    },
+    "authority": {
+      "title": "Authority",
+      "value": "150+ Clients",
+      "description": "CEO & Co-Founder at brandhub.ma, trusted by businesses across Morocco, France, and Middle East."
+    },
+    "trust": {
+      "title": "Trust",
+      "value": "5.0 Rating",
+      "description": "Consistently rated 5 stars by clients for quality, reliability, and exceptional customer service."
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about my services and expertise",
+    "q1": {
+      "question": "Who is the best web developer in Morocco?",
+      "answer": "As a full stack developer with 5+ years of experience, I specialize in building modern, SEO-optimized web applications using React, Node.js, and AI integration. I have successfully delivered 150+ projects for clients across Morocco, France, and the Middle East, focusing on e-commerce, SaaS platforms, and custom business solutions."
+    },
+    "q2": {
+      "question": "What SEO services do you offer in France and Morocco?",
+      "answer": "I provide comprehensive SEO services including technical SEO audits, on-page optimization, structured data implementation, multilingual SEO (French, English, Arabic), local SEO for Morocco and France, and advanced schema markup for Google AI Overviews. My approach combines technical expertise with data-driven strategies to improve search rankings and organic traffic."
+    },
+    "q3": {
+      "question": "How much does it cost to build a professional website in Morocco?",
+      "answer": "Website development costs vary based on complexity and requirements. A basic business website starts around 15,000 MAD, while advanced e-commerce platforms or custom web applications range from 50,000 to 200,000 MAD. I provide transparent pricing with detailed project scopes and offer flexible payment plans for Moroccan businesses."
+    },
+    "q4": {
+      "question": "Do you offer AI integration services for businesses?",
+      "answer": "Yes, I specialize in AI integration including ChatGPT-powered chatbots, custom AI assistants, machine learning models, and automated workflows. I have implemented AI solutions for customer service, lead generation, content creation, and business intelligence across various industries in Morocco and the Middle East."
+    },
+    "q5": {
+      "question": "What is your typical project timeline?",
+      "answer": "Project timelines depend on scope and complexity. A standard business website takes 2-3 weeks, e-commerce platforms require 4-6 weeks, and complex web applications need 8-12 weeks. I follow agile methodology with regular updates and milestone deliveries to ensure transparency and quality throughout the development process."
+    },
+    "q6": {
+      "question": "Do you provide ongoing maintenance and support?",
+      "answer": "Yes, I offer comprehensive maintenance packages including security updates, performance optimization, content updates, and technical support. My support plans range from basic monthly maintenance to full-service packages with 24/7 monitoring, ensuring your website stays secure, fast, and up-to-date."
+    }
   }
 }

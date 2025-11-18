@@ -417,5 +417,67 @@
   },
   "footer": {
     "tagline": "© 2025 Yahya Houssini — Construit avec passion et précision."
+  },
+  "seo": {
+    "region": "Maroc • France • Moyen-Orient",
+    "defaultTitle": "Yahya Loutfi - Développeur Full Stack & Expert SEO | Maroc, France, Moyen-Orient",
+    "defaultDescription": "Développeur Full Stack Expert & Media Buyer spécialisé en React, intégration IA et optimisation SEO. Au service du Maroc, de la France et du Moyen-Orient avec des solutions web de pointe.",
+    "defaultKeywords": "développeur web maroc, développeur full stack france, expert seo moyen-orient, développeur react, intégration ia, développement ecommerce, marketing digital maroc"
+  },
+  "trustBar": {
+    "title": "Technologies & Outils que je Maîtrise",
+    "subtitle": "Création de solutions de classe mondiale avec des technologies leaders"
+  },
+  "eeat": {
+    "title": "Pourquoi Me Choisir",
+    "subtitle": "Historique prouvé de résultats exceptionnels pour les entreprises au Maroc, en France et au Moyen-Orient",
+    "experience": {
+      "title": "Expérience",
+      "value": "5+ Ans",
+      "description": "Actif dans le développement web et le marketing digital depuis 2019, avec des centaines de projets réussis."
+    },
+    "expertise": {
+      "title": "Expertise",
+      "value": "Certifié",
+      "description": "Professionnel certifié Google BI & Data Analytics avec une expertise approfondie en React, IA et optimisation SEO."
+    },
+    "authority": {
+      "title": "Autorité",
+      "value": "150+ Clients",
+      "description": "PDG & Co-Fondateur chez brandhub.ma, reconnu par les entreprises au Maroc, en France et au Moyen-Orient."
+    },
+    "trust": {
+      "title": "Confiance",
+      "value": "Note 5.0",
+      "description": "Constamment noté 5 étoiles par les clients pour la qualité, la fiabilité et un service client exceptionnel."
+    }
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "subtitle": "Trouvez des réponses aux questions courantes sur mes services et mon expertise",
+    "q1": {
+      "question": "Qui est le meilleur développeur web au Maroc ?",
+      "answer": "En tant que développeur full stack avec plus de 5 ans d'expérience, je me spécialise dans la création d'applications web modernes et optimisées pour le SEO en utilisant React, Node.js et l'intégration IA. J'ai livré avec succès plus de 150 projets pour des clients au Maroc, en France et au Moyen-Orient, en me concentrant sur l'e-commerce, les plateformes SaaS et les solutions métier personnalisées."
+    },
+    "q2": {
+      "question": "Quels services SEO proposez-vous en France et au Maroc ?",
+      "answer": "Je fournis des services SEO complets incluant des audits SEO techniques, l'optimisation on-page, l'implémentation de données structurées, le SEO multilingue (français, anglais, arabe), le SEO local pour le Maroc et la France, et le balisage schema avancé pour les aperçus IA de Google. Mon approche combine expertise technique et stratégies basées sur les données pour améliorer les classements de recherche et le trafic organique."
+    },
+    "q3": {
+      "question": "Combien coûte la création d'un site web professionnel au Maroc ?",
+      "answer": "Les coûts de développement web varient selon la complexité et les exigences. Un site vitrine basique commence autour de 15 000 MAD, tandis que les plateformes e-commerce avancées ou les applications web personnalisées varient de 50 000 à 200 000 MAD. Je propose des tarifs transparents avec des portées de projet détaillées et des plans de paiement flexibles pour les entreprises marocaines."
+    },
+    "q4": {
+      "question": "Proposez-vous des services d'intégration IA pour les entreprises ?",
+      "answer": "Oui, je me spécialise dans l'intégration IA incluant des chatbots alimentés par ChatGPT, des assistants IA personnalisés, des modèles d'apprentissage automatique et des workflows automatisés. J'ai implémenté des solutions IA pour le service client, la génération de leads, la création de contenu et l'intelligence d'affaires dans diverses industries au Maroc et au Moyen-Orient."
+    },
+    "q5": {
+      "question": "Quel est votre délai de projet typique ?",
+      "answer": "Les délais de projet dépendent de la portée et de la complexité. Un site vitrine standard prend 2-3 semaines, les plateformes e-commerce nécessitent 4-6 semaines, et les applications web complexes demandent 8-12 semaines. Je suis une méthodologie agile avec des mises à jour régulières et des livraisons par étapes pour assurer transparence et qualité tout au long du processus de développement."
+    },
+    "q6": {
+      "question": "Fournissez-vous une maintenance et un support continus ?",
+      "answer": "Oui, j'offre des forfaits de maintenance complets incluant les mises à jour de sécurité, l'optimisation des performances, les mises à jour de contenu et le support technique. Mes plans de support vont de la maintenance mensuelle de base à des forfaits de service complet avec surveillance 24/7, garantissant que votre site reste sécurisé, rapide et à jour."
+    }
   }
 }
