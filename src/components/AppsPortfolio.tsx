@@ -53,6 +53,7 @@ export const AppsPortfolio = () => {
         .order('display_order', { ascending: true });
 
       if (error) throw error;
+      console.log('Apps loaded:', data?.length, 'apps');
       setApps(data || []);
     } catch (error) {
       console.error('Error fetching apps:', error);
@@ -83,6 +84,8 @@ export const AppsPortfolio = () => {
     const matchesCategory = selectedCategory === 'all' || app.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
+
+  console.log('Total apps:', apps.length, 'Filtered apps:', filteredApps.length);
 
   if (loading) {
     return (
