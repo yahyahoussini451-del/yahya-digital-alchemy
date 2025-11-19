@@ -18,6 +18,7 @@ export type Database = {
         Row: {
           category: string
           created_at: string
+          demo_url: string | null
           description: string
           display_order: number
           gradient: string
@@ -33,6 +34,7 @@ export type Database = {
         Insert: {
           category: string
           created_at?: string
+          demo_url?: string | null
           description: string
           display_order?: number
           gradient: string
@@ -48,6 +50,7 @@ export type Database = {
         Update: {
           category?: string
           created_at?: string
+          demo_url?: string | null
           description?: string
           display_order?: number
           gradient?: string
