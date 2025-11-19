@@ -28,13 +28,13 @@ export const SEOHead = ({
   
   const siteDescription = description || t('seo.defaultDescription');
   const siteKeywords = keywords || t('seo.defaultKeywords');
-  const canonicalUrl = `https://yahyahoussini.com${location.pathname}`;
+  const canonicalUrl = `https://yahyahoussini.pro${location.pathname}`;
   
   // Hreflang configuration for multi-region targeting
   const hreflangs = [
-    { lang: 'fr-FR', url: `https://yahyahoussini.com/fr${location.pathname}` },
-    { lang: 'en-US', url: `https://yahyahoussini.com/en${location.pathname}` },
-    { lang: 'ar-MA', url: `https://yahyahoussini.com/ar${location.pathname}` },
+    { lang: 'fr-FR', url: `https://yahyahoussini.pro/fr${location.pathname}` },
+    { lang: 'en-US', url: `https://yahyahoussini.pro/en${location.pathname}` },
+    { lang: 'ar-MA', url: `https://yahyahoussini.pro/ar${location.pathname}` },
     { lang: 'x-default', url: canonicalUrl }
   ];
 
@@ -43,16 +43,16 @@ export const SEOHead = ({
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Yahya Houssini - Web Development & AI Expert",
-    "url": "https://yahyahoussini.com",
-    "logo": "https://yahyahoussini.com/logo.png",
+      "url": "https://yahyahoussini.pro",
+    "logo": "https://yahyahoussini.pro/logo.png",
     "image": image,
     "description": siteDescription,
     "founder": {
       "@type": "Person",
       "name": "Yahya Houssini",
       "jobTitle": "Full Stack Developer & AI Specialist",
-      "url": "https://yahyahoussini.com",
-      "image": "https://yahyahoussini.com/yahya-profile.webp",
+        "url": "https://yahyahoussini.pro",
+      "image": "https://yahyahoussini.pro/yahya-profile.webp",
       "sameAs": [
         "https://www.linkedin.com/in/yahyahoussini",
         "https://github.com/yahyahoussini",
@@ -127,7 +127,7 @@ export const SEOHead = ({
     "name": "Yahya Houssini",
     "alternateName": "Yahya Houssini - Full Stack Developer",
     "description": "Moroccan Full Stack Developer & Media Buyer with 5+ years of experience. Specialized in React, AI Integration, and SEO optimization.",
-    "url": "https://yahyahoussini.com",
+    "url": "https://yahyahoussini.pro",
     "image": "https://yahyahoussini.com/yahya-profile.webp",
     "email": "mailto:contact@yahyahoussini.com",
     "telephone": "+212-XXX-XXXXXX",
