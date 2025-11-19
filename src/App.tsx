@@ -12,6 +12,7 @@ import AdminApps from "./pages/AdminApps";
 import AppEditor from "./pages/AppEditor";
 import BlogList from "./pages/BlogList";
 import BlogPost from "./pages/BlogPost";
+import MigrateApps from "./pages/MigrateApps";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
         <Route path="/admin/post/:id" element={<PostEditor />} />
         <Route path="/admin/apps" element={<AdminApps />} />
         <Route path="/admin/app/:id" element={<AppEditor />} />
+        <Route path="/migrate-apps" element={<MigrateApps />} />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
