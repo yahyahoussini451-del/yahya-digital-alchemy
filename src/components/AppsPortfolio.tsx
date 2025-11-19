@@ -22,6 +22,7 @@ interface App {
   gradient_start?: string;
   gradient_end?: string;
   display_order: number;
+  demo_url?: string;
 }
 
 export const AppsPortfolio = () => {
@@ -221,9 +222,20 @@ export const AppsPortfolio = () => {
                         </h3>
                       </div>
                     </div>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed mb-4">
                       {app.description}
                     </p>
+                    {app.demo_url && (
+                      <Button 
+                        asChild 
+                        className="w-full"
+                        variant="default"
+                      >
+                        <a href={app.demo_url} target="_blank" rel="noopener noreferrer">
+                          View Demo
+                        </a>
+                      </Button>
+                    )}
                   </CardContent>
               </Card>
             </motion.div>

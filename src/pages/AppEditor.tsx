@@ -27,6 +27,7 @@ const AppEditor = () => {
     gradient_start: '#667eea',
     gradient_end: '#764ba2',
     display_order: 0,
+    demo_url: '',
   });
 
   useEffect(() => {
@@ -71,6 +72,7 @@ const AppEditor = () => {
         gradient_start: data.gradient_start || '#667eea',
         gradient_end: data.gradient_end || '#764ba2',
         display_order: data.display_order,
+        demo_url: data.demo_url || '',
       });
     } catch (error) {
       toast({
@@ -339,6 +341,20 @@ const AppEditor = () => {
                     background: `linear-gradient(135deg, ${formData.gradient_start}, ${formData.gradient_end})`
                   }}
                 />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="demo_url">Lien de démo</Label>
+                <Input
+                  id="demo_url"
+                  type="url"
+                  value={formData.demo_url}
+                  onChange={(e) => setFormData({ ...formData, demo_url: e.target.value })}
+                  placeholder="https://demo.example.com"
+                />
+                <p className="text-xs text-muted-foreground">
+                  URL vers la démo de l'application (optionnel)
+                </p>
               </div>
 
               <div className="space-y-2">
