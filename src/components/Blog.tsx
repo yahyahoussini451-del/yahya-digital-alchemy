@@ -96,9 +96,11 @@ export const Blog = () => {
                     {post.excerpt}
                   </p>
                   
-                  <Button variant="ghost" className="group/btn p-0 h-auto">
-                    <span className="mr-2">{t('blog.readMore')}</span>
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  <Button variant="ghost" className="group/btn p-0 h-auto" asChild>
+                    <a href="/blog">
+                      <span className="mr-2">{t('blog.readMore')}</span>
+                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </a>
                   </Button>
                 </div>
               </Card>
