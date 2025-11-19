@@ -76,7 +76,10 @@
       "realestate": "Real Estate",
       "hospitality": "Hospitality",
       "logistics": "Logistics & Delivery",
-      "fintech": "Financial Technology",
+      "finance": "Finance",
+      "health": "Health & Wellness",
+      "events": "Events Management",
+      "productivity": "Productivity Tools",
       "ai": "AI & Machine Learning"
     },
     "apps": {
