@@ -136,19 +136,42 @@ const Admin = () => {
       </header>
 
       <main className="container mx-auto px-4 py-8">
+        <div className="grid gap-6 mb-8">
+          <Card>
+            <CardHeader>
+              <CardTitle>Gestion du contenu</CardTitle>
+              <CardDescription>Choisissez ce que vous souhaitez gérer</CardDescription>
+            </CardHeader>
+            <CardContent className="grid gap-4 sm:grid-cols-2">
+              <Button asChild variant="outline" className="h-auto py-6 flex-col gap-2">
+                <Link to="/admin/apps">
+                  <PlusCircle className="h-6 w-6" />
+                  <div className="text-center">
+                    <div className="font-semibold">Applications</div>
+                    <div className="text-xs text-muted-foreground">Gérer le portfolio</div>
+                  </div>
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="h-auto py-6 flex-col gap-2">
+                <Link to="/admin/post/new">
+                  <PlusCircle className="h-6 w-6" />
+                  <div className="text-center">
+                    <div className="font-semibold">Nouvel Article</div>
+                    <div className="text-xs text-muted-foreground">Créer un post de blog</div>
+                  </div>
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+
         <div className="flex justify-between items-center mb-8">
           <div>
-            <h2 className="text-3xl font-bold">Gérer les articles</h2>
+            <h2 className="text-3xl font-bold">Articles récents</h2>
             <p className="text-muted-foreground mt-1">
-              Créez et gérez vos articles de blog
+              Gérez vos articles de blog
             </p>
           </div>
-          <Button asChild>
-            <Link to="/admin/post/new">
-              <PlusCircle className="mr-2 h-4 w-4" />
-              Nouvel article
-            </Link>
-          </Button>
         </div>
 
         {posts.length === 0 ? (
