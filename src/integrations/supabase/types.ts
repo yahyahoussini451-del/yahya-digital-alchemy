@@ -14,6 +14,45 @@ export type Database = {
   }
   public: {
     Tables: {
+      apps: {
+        Row: {
+          category: string
+          created_at: string
+          description: string
+          display_order: number
+          gradient: string
+          icon_name: string
+          id: string
+          image_url: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          description: string
+          display_order?: number
+          gradient: string
+          icon_name: string
+          id?: string
+          image_url: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          description?: string
+          display_order?: number
+          gradient?: string
+          icon_name?: string
+          id?: string
+          image_url?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       posts: {
         Row: {
           author_name: string | null
