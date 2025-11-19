@@ -15,13 +15,17 @@ const AppEditor = () => {
   const navigate = useNavigate();
   const { user, loading: authLoading, isAdmin } = useAuth();
   const [loading, setLoading] = useState(false);
+  const [uploading, setUploading] = useState(false);
   const [formData, setFormData] = useState({
     title: '',
     description: '',
     image_url: '',
     icon_name: '',
+    icon_url: '',
     category: '',
     gradient: '',
+    gradient_start: '#667eea',
+    gradient_end: '#764ba2',
     display_order: 0,
   });
 
@@ -61,8 +65,11 @@ const AppEditor = () => {
         description: data.description,
         image_url: data.image_url,
         icon_name: data.icon_name,
+        icon_url: data.icon_url || '',
         category: data.category,
         gradient: data.gradient,
+        gradient_start: data.gradient_start || '#667eea',
+        gradient_end: data.gradient_end || '#764ba2',
         display_order: data.display_order,
       });
     } catch (error) {
@@ -72,6 +79,65 @@ const AppEditor = () => {
         variant: "destructive"
       });
       navigate('/admin/apps');
+    }
+  };
+
+  const handleFileUpload = async (file: File, bucket: 'app-icons' | 'app-covers') => {
+    try {
+      setUploading(true);
+      const fileExt = file.name.split('.').pop();
+      const fileName = `${Math.random()}.${fileExt}`;
+      const filePath = `${fileName}`;
+
+      const { error: uploadError } = await supabase.storage
+        .from(bucket)
+        .upload(filePath, file);
+
+      if (uploadError) throw uploadError;
+
+      const { data: { publicUrl } } = supabase.storage
+        .from(bucket)
+        .getPublicUrl(filePath);
+
+      return publicUrl;
+    } catch (error) {
+      toast({
+        title: "Erreur",
+        description: "Impossible de télécharger le fichier.",
+        variant: "destructive"
+      });
+      return null;
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  const handleIconUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const url = await handleFileUpload(file, 'app-icons');
+    if (url) {
+      setFormData({ ...formData, icon_url: url });
+    }
+  };
+
+  const handleCoverUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    if (!file.name.toLowerCase().endsWith('.webp')) {
+      toast({
+        title: "Format invalide",
+        description: "Veuillez télécharger une image au format .webp",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    const url = await handleFileUpload(file, 'app-covers');
+    if (url) {
+      setFormData({ ...formData, image_url: url });
     }
   };
 
@@ -171,24 +237,47 @@ const AppEditor = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="image_url">URL de l'image</Label>
+                <Label htmlFor="cover_upload">Image de couverture (.webp)</Label>
                 <Input
-                  id="image_url"
-                  value={formData.image_url}
-                  onChange={(e) => setFormData({ ...formData, image_url: e.target.value })}
-                  placeholder="https://example.com/image.jpg"
-                  required
+                  id="cover_upload"
+                  type="file"
+                  accept=".webp"
+                  onChange={handleCoverUpload}
+                  disabled={uploading}
                 />
+                {formData.image_url && (
+                  <div className="mt-2">
+                    <img src={formData.image_url} alt="Preview" className="w-full h-48 object-cover rounded-lg" />
+                  </div>
+                )}
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="icon_name">Nom de l'icône</Label>
+                <Label htmlFor="icon_upload">Icône (image)</Label>
+                <Input
+                  id="icon_upload"
+                  type="file"
+                  accept="image/*"
+                  onChange={handleIconUpload}
+                  disabled={uploading}
+                />
+                {formData.icon_url && (
+                  <div className="mt-2">
+                    <img src={formData.icon_url} alt="Icon preview" className="w-16 h-16 object-cover rounded-lg" />
+                  </div>
+                )}
+                <p className="text-xs text-muted-foreground">
+                  Si vous uploadez une icône, elle sera utilisée à la place de l'icône Lucide
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="icon_name">Nom de l'icône Lucide (optionnel)</Label>
                 <Input
                   id="icon_name"
                   value={formData.icon_name}
                   onChange={(e) => setFormData({ ...formData, icon_name: e.target.value })}
                   placeholder="Ex: ShoppingCart (nom Lucide)"
-                  required
                 />
                 <p className="text-xs text-muted-foreground">
                   Utilisez le nom exact de l'icône Lucide (ex: ShoppingCart, BarChart3, Coffee)
@@ -206,18 +295,50 @@ const AppEditor = () => {
                 />
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="gradient">Gradient Tailwind</Label>
-                <Input
-                  id="gradient"
-                  value={formData.gradient}
-                  onChange={(e) => setFormData({ ...formData, gradient: e.target.value })}
-                  placeholder="Ex: from-orange-500 to-red-600"
-                  required
+              <div className="space-y-4">
+                <Label>Gradient (HEX Colors)</Label>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="gradient_start">Couleur de début</Label>
+                    <div className="flex gap-2">
+                      <Input
+                        id="gradient_start"
+                        type="color"
+                        value={formData.gradient_start}
+                        onChange={(e) => setFormData({ ...formData, gradient_start: e.target.value })}
+                        className="w-20 h-10"
+                      />
+                      <Input
+                        value={formData.gradient_start}
+                        onChange={(e) => setFormData({ ...formData, gradient_start: e.target.value })}
+                        placeholder="#667eea"
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="gradient_end">Couleur de fin</Label>
+                    <div className="flex gap-2">
+                      <Input
+                        id="gradient_end"
+                        type="color"
+                        value={formData.gradient_end}
+                        onChange={(e) => setFormData({ ...formData, gradient_end: e.target.value })}
+                        className="w-20 h-10"
+                      />
+                      <Input
+                        value={formData.gradient_end}
+                        onChange={(e) => setFormData({ ...formData, gradient_end: e.target.value })}
+                        placeholder="#764ba2"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div 
+                  className="w-full h-20 rounded-lg"
+                  style={{
+                    background: `linear-gradient(135deg, ${formData.gradient_start}, ${formData.gradient_end})`
+                  }}
                 />
-                <p className="text-xs text-muted-foreground">
-                  Classes Tailwind pour le dégradé (ex: from-blue-500 to-indigo-600)
-                </p>
               </div>
 
               <div className="space-y-2">
@@ -233,8 +354,8 @@ const AppEditor = () => {
               </div>
 
               <div className="flex gap-4">
-                <Button type="submit" disabled={loading}>
-                  {loading ? (
+                <Button type="submit" disabled={loading || uploading}>
+                  {loading || uploading ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                       Enregistrement...

@@ -21,7 +21,10 @@ export type Database = {
           description: string
           display_order: number
           gradient: string
+          gradient_end: string | null
+          gradient_start: string | null
           icon_name: string
+          icon_url: string | null
           id: string
           image_url: string
           title: string
@@ -33,7 +36,10 @@ export type Database = {
           description: string
           display_order?: number
           gradient: string
+          gradient_end?: string | null
+          gradient_start?: string | null
           icon_name: string
+          icon_url?: string | null
           id?: string
           image_url: string
           title: string
@@ -45,7 +51,10 @@ export type Database = {
           description?: string
           display_order?: number
           gradient?: string
+          gradient_end?: string | null
+          gradient_start?: string | null
           icon_name?: string
+          icon_url?: string | null
           id?: string
           image_url?: string
           title?: string
