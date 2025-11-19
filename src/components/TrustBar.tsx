@@ -19,8 +19,12 @@ import {
   SiOpenai,
   SiN8N,
   SiShopify,
-  SiBlender
+  SiBlender,
+  SiWordpress,
+  SiWoo,
+  SiWebflow
 } from 'react-icons/si';
+import { Store } from 'lucide-react';
 
 export const TrustBar = () => {
   const { t } = useTranslation();
@@ -44,7 +48,11 @@ export const TrustBar = () => {
     { icon: SiOpenai, name: 'LLMs & AI', color: '#412991' },
     { icon: SiN8N, name: 'Automation', color: '#EA4B71' },
     { icon: SiShopify, name: 'E-commerce', color: '#96BF48' },
-    { icon: SiBlender, name: '3D for Ads', color: '#F5792A' }
+    { icon: SiBlender, name: '3D for Ads', color: '#F5792A' },
+    { icon: Store, name: 'YouCan', color: '#00D4AA' },
+    { icon: SiWordpress, name: 'WordPress', color: '#21759B' },
+    { icon: SiWoo, name: 'WooCommerce', color: '#96588A' },
+    { icon: SiWebflow, name: 'Webflow', color: '#4353FF' }
   ];
 
   return (
