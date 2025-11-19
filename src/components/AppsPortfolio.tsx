@@ -6,9 +6,16 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Search, Loader2 } from 'lucide-react';
+import { Search, Loader2, Filter } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { DynamicIcon } from '@/components/DynamicIcon';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 interface App {
   id: string;
@@ -122,18 +129,20 @@ export const AppsPortfolio = () => {
             />
           </div>
 
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
-            {categories.map((category) => (
-              <Button
-                key={category.key}
-                onClick={() => setSelectedCategory(category.key)}
-                variant={selectedCategory === category.key ? "default" : "outline"}
-                size="lg"
-                className="transition-all duration-300 hover:scale-105"
-              >
-                {t(`appsPortfolio.categories.${category.key}`)}
-              </Button>
-            ))}
+          <div className="flex justify-center items-center gap-4 mb-8">
+            <Filter className="h-5 w-5 text-muted-foreground" />
+            <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+              <SelectTrigger className="w-[280px] h-12 text-base">
+                <SelectValue placeholder={t('appsPortfolio.categories.all')} />
+              </SelectTrigger>
+              <SelectContent>
+                {categories.map((category) => (
+                  <SelectItem key={category.key} value={category.key}>
+                    {t(`appsPortfolio.categories.${category.key}`)}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
         </motion.div>
 
