@@ -151,23 +151,34 @@ export const AppsPortfolio = () => {
                       alt={app.title}
                       className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div 
-                      className="absolute inset-0 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center"
-                      style={{
-                        background: app.gradient_start && app.gradient_end 
-                          ? `linear-gradient(135deg, ${app.gradient_start}, ${app.gradient_end})`
-                          : `linear-gradient(to bottom right, ${app.gradient})`
-                      }}
-                    >
-                      {app.icon_url ? (
-                        <img src={app.icon_url} alt={app.title} className="h-20 w-20 animate-pulse" />
-                      ) : (
-                        <DynamicIcon 
-                          name={app.icon_name}
-                          className="h-20 w-20 text-white animate-pulse"
-                        />
-                      )}
-                    </div>
+                    {app.gradient_start && app.gradient_end ? (
+                      <div 
+                        className="absolute inset-0 opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center"
+                        style={{
+                          background: `linear-gradient(135deg, ${app.gradient_start}, ${app.gradient_end})`
+                        }}
+                      >
+                        {app.icon_url ? (
+                          <img src={app.icon_url} alt={app.title} className="h-20 w-20 animate-pulse" />
+                        ) : (
+                          <DynamicIcon 
+                            name={app.icon_name}
+                            className="h-20 w-20 text-white animate-pulse"
+                          />
+                        )}
+                      </div>
+                    ) : (
+                      <div className={`absolute inset-0 bg-gradient-to-t ${app.gradient} opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center`}>
+                        {app.icon_url ? (
+                          <img src={app.icon_url} alt={app.title} className="h-20 w-20 animate-pulse" />
+                        ) : (
+                          <DynamicIcon 
+                            name={app.icon_name}
+                            className="h-20 w-20 text-white animate-pulse"
+                          />
+                        )}
+                      </div>
+                    )}
                     <Badge 
                       className={`absolute top-4 right-4 backdrop-blur-sm bg-background/80`}
                     >
@@ -176,23 +187,34 @@ export const AppsPortfolio = () => {
                   </div>
                   <CardContent className="p-6">
                     <div className="flex items-start gap-3 mb-3">
-                      <div 
-                        className="p-2 rounded-lg"
-                        style={{
-                          background: app.gradient_start && app.gradient_end 
-                            ? `linear-gradient(135deg, ${app.gradient_start}, ${app.gradient_end})`
-                            : `linear-gradient(to bottom right, ${app.gradient})`
-                        }}
-                      >
-                        {app.icon_url ? (
-                          <img src={app.icon_url} alt={app.title} className="h-6 w-6" />
-                        ) : (
-                          <DynamicIcon 
-                            name={app.icon_name}
-                            className="h-6 w-6 text-white"
-                          />
-                        )}
-                      </div>
+                      {app.gradient_start && app.gradient_end ? (
+                        <div 
+                          className="p-2 rounded-lg"
+                          style={{
+                            background: `linear-gradient(135deg, ${app.gradient_start}, ${app.gradient_end})`
+                          }}
+                        >
+                          {app.icon_url ? (
+                            <img src={app.icon_url} alt={app.title} className="h-6 w-6" />
+                          ) : (
+                            <DynamicIcon 
+                              name={app.icon_name}
+                              className="h-6 w-6 text-white"
+                            />
+                          )}
+                        </div>
+                      ) : (
+                        <div className={`p-2 rounded-lg bg-gradient-to-br ${app.gradient}`}>
+                          {app.icon_url ? (
+                            <img src={app.icon_url} alt={app.title} className="h-6 w-6" />
+                          ) : (
+                            <DynamicIcon 
+                              name={app.icon_name}
+                              className="h-6 w-6 text-white"
+                            />
+                          )}
+                        </div>
+                      )}
                       <div className="flex-1">
                         <h3 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors">
                           {app.title}
