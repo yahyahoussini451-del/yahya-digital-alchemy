@@ -83,6 +83,41 @@ export const AppsPortfolio = () => {
     );
   }
 
+  // Show migration prompt if no apps exist at all
+  if (apps.length === 0) {
+    return (
+      <section ref={ref} className="py-24 bg-gradient-to-b from-background to-muted/20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              {t('appsPortfolio.title')}
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+              {t('appsPortfolio.subtitle')}
+            </p>
+            <Card className="max-w-md mx-auto">
+              <CardContent className="pt-6">
+                <p className="text-muted-foreground mb-4">
+                  No apps found. Import your existing apps to get started.
+                </p>
+                <Button asChild size="lg" className="w-full">
+                  <a href="/migrate-apps">
+                    Import 27 Apps
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section ref={ref} className="py-24 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-4">
