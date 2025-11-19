@@ -12,7 +12,7 @@ interface SitemapUrl {
   alternates?: { lang: string; href: string }[];
 }
 
-const baseUrl = 'https://yahyaloutfi.com';
+const baseUrl = 'https://yahyahoussini.com';
 const languages = ['en', 'fr', 'ar'];
 
 const routes: Omit<SitemapUrl, 'lastmod' | 'alternates'>[] = [
