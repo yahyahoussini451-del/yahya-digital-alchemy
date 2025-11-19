@@ -153,12 +153,19 @@ const AdminApps = () => {
           <Card>
             <CardContent className="flex flex-col items-center justify-center py-12">
               <p className="text-muted-foreground mb-4">Aucune application pour le moment</p>
-              <Button asChild>
-                <Link to="/admin/app/new">
-                  <PlusCircle className="mr-2 h-4 w-4" />
-                  Créer votre première application
-                </Link>
-              </Button>
+              <div className="flex gap-2">
+                <Button asChild variant="default">
+                  <Link to="/migrate-apps">
+                    Importer les apps existantes
+                  </Link>
+                </Button>
+                <Button asChild variant="outline">
+                  <Link to="/admin/app/new">
+                    <PlusCircle className="mr-2 h-4 w-4" />
+                    Créer manuellement
+                  </Link>
+                </Button>
+              </div>
             </CardContent>
           </Card>
         ) : (
