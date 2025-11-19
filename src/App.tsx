@@ -13,6 +13,8 @@ import AppEditor from "./pages/AppEditor";
 import BlogList from "./pages/BlogList";
 import BlogPost from "./pages/BlogPost";
 import MigrateApps from "./pages/MigrateApps";
+import AdminCertifications from "./pages/AdminCertifications";
+import CertificationEditor from "./pages/CertificationEditor";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +31,8 @@ const App = () => (
         <Route path="/admin/post/:id" element={<PostEditor />} />
         <Route path="/admin/apps" element={<AdminApps />} />
         <Route path="/admin/app/:id" element={<AppEditor />} />
+        <Route path="/admin/certifications" element={<AdminCertifications />} />
+        <Route path="/admin/certification/:id" element={<CertificationEditor />} />
         <Route path="/migrate-apps" element={<MigrateApps />} />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogPost />} />

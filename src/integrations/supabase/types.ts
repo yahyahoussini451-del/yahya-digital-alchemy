@@ -65,6 +65,63 @@ export type Database = {
         }
         Relationships: []
       }
+      certifications: {
+        Row: {
+          created_at: string
+          credential_url: string | null
+          description_ar: string | null
+          description_en: string | null
+          description_fr: string | null
+          display_order: number
+          id: string
+          image_url: string
+          is_featured: boolean | null
+          issuer_ar: string
+          issuer_en: string
+          issuer_fr: string
+          title_ar: string
+          title_en: string
+          title_fr: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          credential_url?: string | null
+          description_ar?: string | null
+          description_en?: string | null
+          description_fr?: string | null
+          display_order?: number
+          id?: string
+          image_url: string
+          is_featured?: boolean | null
+          issuer_ar: string
+          issuer_en: string
+          issuer_fr: string
+          title_ar: string
+          title_en: string
+          title_fr: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          credential_url?: string | null
+          description_ar?: string | null
+          description_en?: string | null
+          description_fr?: string | null
+          display_order?: number
+          id?: string
+          image_url?: string
+          is_featured?: boolean | null
+          issuer_ar?: string
+          issuer_en?: string
+          issuer_fr?: string
+          title_ar?: string
+          title_en?: string
+          title_fr?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       posts: {
         Row: {
           author_name: string | null
