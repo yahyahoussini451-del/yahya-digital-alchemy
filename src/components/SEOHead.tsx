@@ -21,20 +21,20 @@ export const SEOHead = ({
   const location = useLocation();
   const currentLang = i18n.language;
   
-  // Dynamic title format: [Service] | [City/Region] | Yahya Loutfi
+  // Dynamic title format: [Service] | [City/Region] | Yahya Houssini
   const siteTitle = title 
-    ? `${title} | ${t('seo.region')} | Yahya Loutfi`
+    ? `${title} | ${t('seo.region')} | Yahya Houssini`
     : t('seo.defaultTitle');
   
   const siteDescription = description || t('seo.defaultDescription');
   const siteKeywords = keywords || t('seo.defaultKeywords');
-  const canonicalUrl = `https://yahyaloutfi.com${location.pathname}`;
+  const canonicalUrl = `https://yahyahoussini.com${location.pathname}`;
   
   // Hreflang configuration for multi-region targeting
   const hreflangs = [
-    { lang: 'fr-FR', url: `https://yahyaloutfi.com/fr${location.pathname}` },
-    { lang: 'en-US', url: `https://yahyaloutfi.com/en${location.pathname}` },
-    { lang: 'ar-MA', url: `https://yahyaloutfi.com/ar${location.pathname}` },
+    { lang: 'fr-FR', url: `https://yahyahoussini.com/fr${location.pathname}` },
+    { lang: 'en-US', url: `https://yahyahoussini.com/en${location.pathname}` },
+    { lang: 'ar-MA', url: `https://yahyahoussini.com/ar${location.pathname}` },
     { lang: 'x-default', url: canonicalUrl }
   ];
 
@@ -42,35 +42,34 @@ export const SEOHead = ({
   const professionalServiceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "Yahya Loutfi - Web Development & SEO Expert",
-    "url": "https://yahyaloutfi.com",
-    "logo": "https://brandhub.ma/logo.png",
+    "name": "Yahya Houssini - Web Development & AI Expert",
+    "url": "https://yahyahoussini.com",
+    "logo": "https://yahyahoussini.com/logo.png",
     "image": image,
     "description": siteDescription,
     "founder": {
       "@type": "Person",
-      "name": "Yahya Loutfi",
-      "jobTitle": "Full Stack Developer & Media Buyer Expert",
-      "url": "https://yahyaloutfi.com",
-      "image": "https://yahyaloutfi.com/yahya-profile.webp",
+      "name": "Yahya Houssini",
+      "jobTitle": "Full Stack Developer & AI Specialist",
+      "url": "https://yahyahoussini.com",
+      "image": "https://yahyahoussini.com/yahya-profile.webp",
       "sameAs": [
-        "https://www.linkedin.com/in/yahya-loutfi",
-        "https://github.com/yahyaloutfi",
-        "https://brandhub.ma"
+        "https://www.linkedin.com/in/yahyahoussini",
+        "https://github.com/yahyahoussini",
+        "https://www.instagram.com/yahyahoussini"
       ],
       "knowsAbout": [
-        "SEO Optimization",
-        "React.js Development",
-        "JavaScript",
-        "TypeScript",
-        "UI/UX Design",
+        "Web Development",
+        "React",
+        "AI Automation",
+        "SEO",
         "Full Stack Development",
         "AI Integration",
         "Machine Learning",
         "Digital Marketing",
         "Media Buying",
         "E-commerce Solutions",
-        "Business Intelligence"
+        "SaaS Development"
       ],
       "hasCredential": [
         {
@@ -125,23 +124,22 @@ export const SEOHead = ({
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Yahya Loutfi",
-    "alternateName": "Yahya Loutfi - Full Stack Developer",
-    "description": "Moroccan Full Stack Developer & Media Buyer with 5+ years of experience. CEO & Co-Founder at brandhub.ma. Specialized in React, AI Integration, and SEO optimization.",
-    "url": "https://yahyaloutfi.com",
-    "image": "https://yahyaloutfi.com/yahya-profile.webp",
-    "email": "mailto:contact@yahyaloutfi.com",
+    "name": "Yahya Houssini",
+    "alternateName": "Yahya Houssini - Full Stack Developer",
+    "description": "Moroccan Full Stack Developer & Media Buyer with 5+ years of experience. Specialized in React, AI Integration, and SEO optimization.",
+    "url": "https://yahyahoussini.com",
+    "image": "https://yahyahoussini.com/yahya-profile.webp",
+    "email": "mailto:contact@yahyahoussini.com",
     "telephone": "+212-XXX-XXXXXX",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "MA",
       "addressLocality": "Morocco"
     },
-    "jobTitle": "Full Stack Developer & SEO Expert",
+    "jobTitle": "Full Stack Developer & AI Specialist",
     "worksFor": {
       "@type": "Organization",
-      "name": "brandhub.ma",
-      "url": "https://brandhub.ma"
+      "name": "Freelance"
     },
     "knowsLanguage": ["English", "French", "Arabic"],
     "hasOccupation": {
@@ -174,7 +172,7 @@ export const SEOHead = ({
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://yahyaloutfi.com"
+        "item": "https://yahyahoussini.com"
       }
     ]
   };
@@ -187,7 +185,7 @@ export const SEOHead = ({
       <meta name="title" content={siteTitle} />
       <meta name="description" content={siteDescription} />
       <meta name="keywords" content={siteKeywords} />
-      <meta name="author" content="Yahya Loutfi" />
+      <meta name="author" content="Yahya Houssini" />
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="googlebot" content="index, follow" />
       <link rel="canonical" href={canonicalUrl} />
@@ -211,7 +209,7 @@ export const SEOHead = ({
       <meta property="twitter:title" content={siteTitle} />
       <meta property="twitter:description" content={siteDescription} />
       <meta property="twitter:image" content={image} />
-      <meta name="twitter:creator" content="@yahyaloutfi" />
+      <meta name="twitter:creator" content="@yahyahoussini" />
 
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#000000" />
