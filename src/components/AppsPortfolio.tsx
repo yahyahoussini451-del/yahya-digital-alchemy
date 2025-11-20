@@ -85,7 +85,7 @@ export const AppsPortfolio = () => {
     return matchesSearch && matchesCategory;
   });
 
-  console.log('Total apps:', apps.length, 'Filtered apps:', filteredApps.length);
+  console.log('AppsPortfolio - Total apps:', apps.length, 'Filtered apps:', filteredApps.length, 'Loading:', loading);
 
   if (loading) {
     return (

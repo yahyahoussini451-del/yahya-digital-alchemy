@@ -37,12 +37,14 @@ export const Certifications = () => {
 
   const fetchCertifications = async () => {
     try {
+      console.log('Certifications - Fetching data...');
       const { data, error } = await supabase
         .from('certifications')
         .select('*')
         .order('display_order', { ascending: true });
 
       if (error) throw error;
+      console.log('Certifications - Fetched:', data?.length, 'items');
       setCertifications(data || []);
     } catch (error) {
       console.error('Error fetching certifications:', error);
