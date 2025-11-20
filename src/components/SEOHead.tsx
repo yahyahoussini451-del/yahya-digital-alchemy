@@ -42,16 +42,33 @@ export const SEOHead = ({
   const professionalServiceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "Yahya Houssini - Web Development & AI Expert",
-      "url": "https://yahyahoussini.pro",
+    "name": "Yahya Houssini - Développeur Web & Expert IA | Morocco",
+    "alternateName": [
+      "يحيى حسيني - مطور ويب وخبير الذكاء الاصطناعي",
+      "Yahya Houssini - Web Developer & AI Expert Morocco"
+    ],
+    "url": "https://yahyahoussini.pro",
     "logo": "https://yahyahoussini.pro/logo.png",
     "image": image,
     "description": siteDescription,
+    "telephone": "+212-XXX-XXXXXX",
+    "email": "yahyahoussini366@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "MA",
+      "addressRegion": "Morocco"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "33.5731",
+      "longitude": "-7.5898"
+    },
     "founder": {
       "@type": "Person",
       "name": "Yahya Houssini",
+      "alternateName": "يحيى حسيني",
       "jobTitle": "Full Stack Developer & AI Specialist",
-        "url": "https://yahyahoussini.pro",
+      "url": "https://yahyahoussini.pro",
       "image": "https://yahyahoussini.pro/yahya-profile.webp",
       "sameAs": [
         "https://www.linkedin.com/in/yahyahoussini",
@@ -62,25 +79,50 @@ export const SEOHead = ({
         "Web Development",
         "React",
         "AI Automation",
-        "SEO",
+        "SEO Maroc",
         "Full Stack Development",
         "AI Integration",
         "Machine Learning",
-        "Digital Marketing",
-        "Media Buying",
+        "Digital Marketing Morocco",
+        "Media Buying MENA",
         "E-commerce Solutions",
         "SaaS Development"
+      ],
+      "knowsLanguage": [
+        {
+          "@type": "Language",
+          "name": "French",
+          "alternateName": "fr"
+        },
+        {
+          "@type": "Language",
+          "name": "English",
+          "alternateName": "en"
+        },
+        {
+          "@type": "Language",
+          "name": "Arabic",
+          "alternateName": "ar"
+        }
       ],
       "hasCredential": [
         {
           "@type": "EducationalOccupationalCredential",
           "name": "Google Business Intelligence Professional Certificate",
-          "credentialCategory": "certification"
+          "credentialCategory": "certification",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Google"
+          }
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "Google Data Analytics Professional Certificate",
-          "credentialCategory": "certification"
+          "credentialCategory": "certification",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Google"
+          }
         }
       ],
       "alumniOf": {
@@ -91,32 +133,52 @@ export const SEOHead = ({
     "areaServed": [
       {
         "@type": "Country",
-        "name": "Morocco"
+        "name": "Morocco",
+        "alternateName": ["Maroc", "المغرب"]
       },
       {
         "@type": "Country",
-        "name": "France"
+        "name": "France",
+        "alternateName": ["فرنسا"]
       },
       {
         "@type": "Place",
-        "name": "Middle East"
+        "name": "Middle East",
+        "alternateName": ["Moyen-Orient", "الشرق الأوسط"]
+      },
+      {
+        "@type": "Country",
+        "name": "United Arab Emirates",
+        "alternateName": ["UAE", "الإمارات"]
+      },
+      {
+        "@type": "Country",
+        "name": "Saudi Arabia",
+        "alternateName": ["المملكة العربية السعودية"]
       }
     ],
     "serviceType": [
-      "Web Development",
-      "SEO Services",
-      "E-commerce Development",
+      "Web Development Morocco",
+      "SEO Services Maroc",
+      "E-commerce Development MENA",
       "AI Integration",
-      "Digital Marketing",
-      "Media Buying",
+      "Digital Marketing Morocco",
+      "Media Buying Middle East",
       "UI/UX Design",
       "Full Stack Development"
     ],
     "priceRange": "$$",
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "47"
+      "ratingValue": "5.0",
+      "reviewCount": "47",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "MAD"
     }
   };
 
