@@ -16,12 +16,14 @@ import { FAQSection } from '@/components/FAQSection';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 import { SEOHead } from '@/components/SEOHead';
+import { FAQSchema } from '@/components/FAQSchema';
 import '@/i18n/config';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead />
+      <FAQSchema />
       <Header />
       <main>
         <Hero />
