@@ -69,6 +69,9 @@ export type Database = {
         Row: {
           created_at: string
           credential_url: string | null
+          date_ar: string | null
+          date_en: string | null
+          date_fr: string | null
           description_ar: string | null
           description_en: string | null
           description_fr: string | null
@@ -87,6 +90,9 @@ export type Database = {
         Insert: {
           created_at?: string
           credential_url?: string | null
+          date_ar?: string | null
+          date_en?: string | null
+          date_fr?: string | null
           description_ar?: string | null
           description_en?: string | null
           description_fr?: string | null
@@ -105,6 +111,9 @@ export type Database = {
         Update: {
           created_at?: string
           credential_url?: string | null
+          date_ar?: string | null
+          date_en?: string | null
+          date_fr?: string | null
           description_ar?: string | null
           description_en?: string | null
           description_fr?: string | null

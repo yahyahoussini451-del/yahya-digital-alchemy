@@ -17,6 +17,9 @@ interface Certification {
   description_en?: string;
   description_fr?: string;
   description_ar?: string;
+  date_en?: string;
+  date_fr?: string;
+  date_ar?: string;
   image_url: string;
   credential_url?: string;
 }
@@ -48,7 +51,7 @@ export const Certifications = () => {
     }
   };
 
-  const getLangField = (field: 'title' | 'issuer' | 'description', cert: Certification) => {
+  const getLangField = (field: 'title' | 'issuer' | 'description' | 'date', cert: Certification) => {
     const lang = i18n.language;
     if (lang === 'fr') return cert[`${field}_fr`];
     if (lang === 'ar') return cert[`${field}_ar`];
@@ -58,6 +61,7 @@ export const Certifications = () => {
   const certificates = certifications.map(cert => ({
     title: getLangField('title', cert),
     issuer: getLangField('issuer', cert),
+    date: getLangField('date', cert) || '',
     description: getLangField('description', cert) || '',
     src: cert.image_url,
     credentialUrl: cert.credential_url
