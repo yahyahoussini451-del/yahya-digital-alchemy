@@ -32,12 +32,14 @@ export const Testimonials = () => {
 
   const fetchTestimonials = async () => {
     try {
+      console.log('Testimonials - Fetching data...');
       const { data, error } = await supabase
         .from('testimonials')
         .select('*')
         .order('display_order', { ascending: true });
 
       if (error) throw error;
+      console.log('Testimonials - Fetched:', data?.length, 'items');
       setTestimonials(data || []);
     } catch (error) {
       console.error('Error fetching testimonials:', error);
