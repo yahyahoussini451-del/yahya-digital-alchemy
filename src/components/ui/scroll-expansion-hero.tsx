@@ -41,6 +41,15 @@ const ScrollExpandMedia = ({
     setScrollProgress(0);
     setShowContent(false);
     setMediaFullyExpanded(false);
+    
+    // Auto-expand after 3 seconds to ensure content is accessible
+    const autoExpandTimer = setTimeout(() => {
+      setScrollProgress(1);
+      setMediaFullyExpanded(true);
+      setShowContent(true);
+    }, 3000);
+    
+    return () => clearTimeout(autoExpandTimer);
   }, [mediaType]);
 
   useEffect(() => {
@@ -105,6 +114,10 @@ const ScrollExpandMedia = ({
     };
 
     const handleScroll = (): void => {
+      // Allow normal scrolling once media is fully expanded
+      if (mediaFullyExpanded && window.scrollY > 10) {
+        return;
+      }
       if (!mediaFullyExpanded) {
         window.scrollTo(0, 0);
       }
