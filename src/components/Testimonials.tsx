@@ -63,10 +63,7 @@ export const Testimonials = () => {
     );
   }
 
-  if (testimonials.length === 0) {
-    return null;
-  }
-
+  // Always render section, show message if no testimonials
   return (
     <section id="testimonials" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
@@ -80,7 +77,12 @@ export const Testimonials = () => {
             {t('testimonials.title')}
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          {testimonials.length === 0 ? (
+            <p className="text-center text-muted-foreground text-lg">
+              No testimonials available yet.
+            </p>
+          ) : (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.id}
@@ -108,7 +110,8 @@ export const Testimonials = () => {
                 </div>
               </motion.div>
             ))}
-          </div>
+            </div>
+          )}
         </motion.div>
       </div>
     </section>

@@ -99,7 +99,7 @@ export const AppsPortfolio = () => {
 
 
   return (
-    <section ref={ref} className="py-24 bg-gradient-to-b from-background to-muted/20">
+    <section id="apps-portfolio" ref={ref} className="py-24 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
