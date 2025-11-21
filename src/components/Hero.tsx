@@ -14,7 +14,7 @@ export const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center">
+    <section id="home" className="relative min-h-screen flex items-center justify-center pt-20">
       {/* Background Image */}
       <div 
         className="absolute inset-0 z-0"
@@ -28,7 +28,7 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 z-10 py-20">
+      <div className="container mx-auto px-4 z-10 py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <motion.div

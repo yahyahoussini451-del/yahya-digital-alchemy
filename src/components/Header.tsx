@@ -50,7 +50,7 @@ export const Header = () => {
     { key: 'home', id: 'home', icon: Home },
     { key: 'about', id: 'about', icon: User },
     { key: 'skills', id: 'skills', icon: Wrench },
-    { key: 'projects', id: 'projects', icon: Briefcase },
+    { key: 'appsPortfolio', id: 'apps-portfolio', icon: Briefcase },
     { key: 'certifications', id: 'certifications', icon: Award },
     { key: 'testimonials', id: 'testimonials', icon: MessageSquare },
     { key: 'contact', id: 'contact', icon: Mail }
