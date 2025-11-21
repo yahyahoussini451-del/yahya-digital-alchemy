@@ -13,6 +13,7 @@ import { CaseStudies } from '@/components/CaseStudies';
 import { Certifications } from '@/components/Certifications';
 import { Testimonials } from '@/components/Testimonials';
 import { FAQSection } from '@/components/FAQSection';
+import { Journey } from '@/components/Journey';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 import { SEOHead } from '@/components/SEOHead';
@@ -40,6 +41,7 @@ const Index = () => {
         <Certifications />
         <Testimonials />
         <FAQSection />
+        <Journey />
         <Contact />
       </main>
       <Footer />
