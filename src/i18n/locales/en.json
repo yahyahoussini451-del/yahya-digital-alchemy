@@ -458,7 +458,45 @@
   },
   "journey": {
     "title": "My Development Journey",
-    "subtitle": "Explore the phases of how I transform ideas into digital reality"
+    "subtitle": "Explore the phases of how I transform ideas into digital reality",
+    "phases": {
+      "strategy": {
+        "title": "Strategy & Planning",
+        "phase": "Phase 1",
+        "content": "Defining project scope, requirements gathering, and strategic planning for successful execution.",
+        "category": "Planning"
+      },
+      "design": {
+        "title": "Design & Branding",
+        "phase": "Phase 2",
+        "content": "Creating stunning visual identities, UI/UX design, and brand systems that captivate audiences.",
+        "category": "Design"
+      },
+      "development": {
+        "title": "Development",
+        "phase": "Phase 3",
+        "content": "Building robust, scalable applications with cutting-edge technologies and best practices.",
+        "category": "Development"
+      },
+      "testing": {
+        "title": "Testing & QA",
+        "phase": "Phase 4",
+        "content": "Rigorous testing, quality assurance, and optimization to ensure flawless performance.",
+        "category": "Testing"
+      },
+      "launch": {
+        "title": "Launch & Deploy",
+        "phase": "Phase 5",
+        "content": "Strategic deployment, monitoring, and ensuring smooth launch with zero downtime.",
+        "category": "Launch"
+      },
+      "growth": {
+        "title": "Growth & Scale",
+        "phase": "Phase 6",
+        "content": "Continuous optimization, scaling infrastructure, and driving growth through data-driven insights.",
+        "category": "Growth"
+      }
+    }
   },
   "faq": {
     "title": "Frequently Asked Questions",
