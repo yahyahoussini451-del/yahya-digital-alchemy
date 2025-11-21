@@ -458,7 +458,45 @@
   },
   "journey": {
     "title": "Mon Parcours de Développement",
-    "subtitle": "Découvrez les phases de transformation des idées en réalité numérique"
+    "subtitle": "Explorez les phases de la transformation d'idées en réalité numérique",
+    "phases": {
+      "strategy": {
+        "title": "Stratégie & Planification",
+        "phase": "Phase 1",
+        "content": "Définition du périmètre du projet, collecte des exigences et planification stratégique pour une exécution réussie.",
+        "category": "Planification"
+      },
+      "design": {
+        "title": "Design & Image de Marque",
+        "phase": "Phase 2",
+        "content": "Création d'identités visuelles époustouflantes, design UI/UX et systèmes de marque qui captivent les audiences.",
+        "category": "Design"
+      },
+      "development": {
+        "title": "Développement",
+        "phase": "Phase 3",
+        "content": "Construction d'applications robustes et évolutives avec des technologies de pointe et les meilleures pratiques.",
+        "category": "Développement"
+      },
+      "testing": {
+        "title": "Tests & Assurance Qualité",
+        "phase": "Phase 4",
+        "content": "Tests rigoureux, assurance qualité et optimisation pour garantir des performances impeccables.",
+        "category": "Tests"
+      },
+      "launch": {
+        "title": "Lancement & Déploiement",
+        "phase": "Phase 5",
+        "content": "Déploiement stratégique, surveillance et assurance d'un lancement sans accroc avec zéro temps d'arrêt.",
+        "category": "Lancement"
+      },
+      "growth": {
+        "title": "Croissance & Évolution",
+        "phase": "Phase 6",
+        "content": "Optimisation continue, évolution de l'infrastructure et stimulation de la croissance grâce aux données.",
+        "category": "Croissance"
+      }
+    }
   },
   "faq": {
     "title": "Questions Fréquemment Posées",
