@@ -11,10 +11,17 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "I Build Intelligent Digital Experiences.",
-    "subtitle": "Full Stack Developer & Media Buyer Expert — combining technology and strategy to help brands grow.",
+    "title": "Build Intelligent Digital Experiences",
+    "subtitle": "Full Stack Developer & Media Buyer Expert",
+    "scrollToExpand": "Scroll to Explore",
     "viewWork": "View My Work",
-    "hireMe": "Hire Me"
+    "hireMe": "Hire Me",
+    "stats": {
+      "years": "Years Experience",
+      "projects": "Projects Completed",
+      "clients": "Happy Clients",
+      "awards": "Awards Won"
+    }
   },
   "about": {
     "title": "About Me",
