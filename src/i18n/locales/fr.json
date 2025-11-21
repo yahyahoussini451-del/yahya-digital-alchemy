@@ -456,6 +456,10 @@
       "description": "Constamment noté 5 étoiles par les clients pour la qualité, la fiabilité et un service client exceptionnel."
     }
   },
+  "journey": {
+    "title": "Mon Parcours de Développement",
+    "subtitle": "Découvrez les phases de transformation des idées en réalité numérique"
+  },
   "faq": {
     "title": "Questions Fréquemment Posées",
     "subtitle": "Trouvez des réponses aux questions courantes sur mes services et mon expertise",
