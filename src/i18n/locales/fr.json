@@ -11,10 +11,17 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Je Construis des Expériences Numériques Intelligentes.",
-    "subtitle": "Développeur Full Stack & Expert Media Buyer — alliant technologie et stratégie pour aider les marques à croître.",
+    "title": "Construire des Expériences Numériques Intelligentes",
+    "subtitle": "Développeur Full Stack & Expert Media Buyer",
+    "scrollToExpand": "Faites Défiler pour Explorer",
     "viewWork": "Voir Mon Travail",
-    "hireMe": "Me Recruter"
+    "hireMe": "Me Recruter",
+    "stats": {
+      "years": "Années d'Expérience",
+      "projects": "Projets Réalisés",
+      "clients": "Clients Satisfaits",
+      "awards": "Récompenses"
+    }
   },
   "about": {
     "title": "À Propos de Moi",

@@ -1,91 +1,70 @@
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { ArrowRight, Briefcase } from 'lucide-react';
 import heroSpeaking from '@/assets/hero-speaking.png';
+import ScrollExpandMedia from '@/components/ui/scroll-expansion-hero';
 
 export const Hero = () => {
   const { t } = useTranslation();
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-20">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1541410965313-d53b3c16ef17?q=80&w=1920&auto=format&fit=crop)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
-      </div>
-
-      {/* Content */}
-      <div className="container mx-auto px-4 z-10 py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-left space-y-6"
+    <ScrollExpandMedia
+      mediaType="image"
+      mediaSrc={heroSpeaking}
+      bgImageSrc="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1920&auto=format&fit=crop"
+      title={t('hero.title')}
+      subtitle={t('hero.subtitle')}
+      scrollToExpand={t('hero.scrollToExpand')}
+      textBlend
+    >
+      <div className="max-w-4xl mx-auto space-y-8">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button 
+            size="lg" 
+            className="group text-lg px-8 py-6"
+            asChild
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              <span className="bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Build Intelligent
-              </span>
-              <br />
-              <span className="text-foreground">Digital Experiences</span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl">
-              Full Stack Developer & Media Buyer Expert — combining technology and strategy to help brands grow.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-start gap-4 pt-4">
-              <Button
-                size="lg"
-                onClick={() => scrollToSection('projects')}
-                className="bg-gradient-to-r from-[hsl(330,81%,60%)] to-[hsl(340,82%,52%)] hover:opacity-90 transition-opacity text-white font-medium px-8"
-              >
-                {t('hero.viewWork')}
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={() => window.location.href = 'mailto:yahyahoussini366@gmail.com?subject=Let\'s Work Together'}
-                className="border-2 font-medium px-8"
-              >
-                {t('hero.hireMe')}
-              </Button>
-            </div>
-          </motion.div>
-
-          {/* Hero Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            <a href="#projects">
+              {t('hero.viewWork')}
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </Button>
+          <Button 
+            size="lg" 
+            variant="outline"
+            className="text-lg px-8 py-6"
+            asChild
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src={heroSpeaking}
-                alt="Yahya Houssini"
-                className="w-full h-auto object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
-            </div>
-          </motion.div>
+            <a href="#contact">
+              <Briefcase className="mr-2" />
+              {t('hero.hireMe')}
+            </a>
+          </Button>
+        </div>
+
+        {/* Floating stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12">
+          <div className="bg-card p-6 rounded-xl shadow-lg border text-center">
+            <div className="text-3xl font-bold text-primary">10+</div>
+            <div className="text-sm text-muted-foreground">{t('hero.stats.years')}</div>
+          </div>
+          
+          <div className="bg-card p-6 rounded-xl shadow-lg border text-center">
+            <div className="text-3xl font-bold text-primary">50+</div>
+            <div className="text-sm text-muted-foreground">{t('hero.stats.projects')}</div>
+          </div>
+
+          <div className="bg-card p-6 rounded-xl shadow-lg border text-center">
+            <div className="text-3xl font-bold text-primary">100+</div>
+            <div className="text-sm text-muted-foreground">{t('hero.stats.clients')}</div>
+          </div>
+
+          <div className="bg-card p-6 rounded-xl shadow-lg border text-center">
+            <div className="text-3xl font-bold text-primary">15+</div>
+            <div className="text-sm text-muted-foreground">{t('hero.stats.awards')}</div>
+          </div>
         </div>
       </div>
-    </section>
+    </ScrollExpandMedia>
   );
 };
