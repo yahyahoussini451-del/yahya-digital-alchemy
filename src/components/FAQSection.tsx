@@ -53,7 +53,7 @@ export const FAQSection = () => {
   return (
     <section 
       id="faq" 
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-muted/20 to-background"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30"
       ref={ref}
     >
       <script type="application/ld+json">
