@@ -71,7 +71,7 @@ export const Certifications = () => {
 
   if (loading) {
     return (
-      <section id="certifications" className="py-20 md:py-32 bg-secondary/50 min-h-screen">
+      <section id="certifications" className="py-20 md:py-32 bg-muted min-h-screen">
         <div className="container mx-auto px-4 flex justify-center">
           <Loader2 className="h-8 w-8 animate-spin text-primary" />
         </div>
@@ -81,7 +81,7 @@ export const Certifications = () => {
 
   // Always render section even with no data, show message instead
   return (
-    <section id="certifications" className="py-20 md:py-32 bg-secondary/50 min-h-screen">
+    <section id="certifications" className="py-20 md:py-32 bg-muted min-h-screen">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}

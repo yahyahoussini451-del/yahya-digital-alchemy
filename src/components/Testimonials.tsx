@@ -57,7 +57,7 @@ export const Testimonials = () => {
 
   if (loading) {
     return (
-      <section id="testimonials" className="py-20 md:py-32 bg-accent/5 min-h-screen">
+      <section id="testimonials" className="py-20 md:py-32 bg-secondary min-h-screen">
         <div className="container mx-auto px-4 flex justify-center">
           <Loader2 className="h-8 w-8 animate-spin text-primary" />
         </div>
@@ -67,7 +67,7 @@ export const Testimonials = () => {
 
   // Always render section, show message if no testimonials
   return (
-    <section id="testimonials" className="py-20 md:py-32 bg-accent/5 min-h-screen">
+    <section id="testimonials" className="py-20 md:py-32 bg-secondary min-h-screen">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
