@@ -99,7 +99,7 @@ export const AppsPortfolio = () => {
 
 
   return (
-    <section id="apps-portfolio" ref={ref} className="py-24 bg-muted/30 min-h-screen">
+    <section id="apps-portfolio" ref={ref} className="py-24 bg-secondary min-h-screen">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
