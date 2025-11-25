@@ -9,47 +9,57 @@ export const Skills = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  // Helper function to safely get skill items array
+  const getSkillItems = (key: string): string[] => {
+    const items = t(key, { returnObjects: true });
+    // Ensure we always return an array, even if translation isn't loaded
+    if (Array.isArray(items)) {
+      return items as string[];
+    }
+    return [];
+  };
+
   const skillCategories = [
     {
       icon: Code2,
       title: t('skills.fullstack.title'),
       level: t('skills.fullstack.level'),
-      skills: t('skills.fullstack.items', { returnObjects: true }) as string[],
+      skills: getSkillItems('skills.fullstack.items'),
       color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: Palette,
       title: t('skills.branding.title'),
       level: t('skills.branding.level'),
-      skills: t('skills.branding.items', { returnObjects: true }) as string[],
+      skills: getSkillItems('skills.branding.items'),
       color: 'from-pink-500 to-rose-500'
     },
     {
       icon: Box,
       title: t('skills.3d.title'),
       level: t('skills.3d.level'),
-      skills: t('skills.3d.items', { returnObjects: true }) as string[],
+      skills: getSkillItems('skills.3d.items'),
       color: 'from-purple-500 to-indigo-500'
     },
     {
       icon: Brain,
       title: t('skills.ai.title'),
       level: t('skills.ai.level'),
-      skills: t('skills.ai.items', { returnObjects: true }) as string[],
+      skills: getSkillItems('skills.ai.items'),
       color: 'from-orange-500 to-red-500'
     },
     {
       icon: BarChart3,
       title: t('skills.bi.title'),
       level: t('skills.bi.level'),
-      skills: t('skills.bi.items', { returnObjects: true }) as string[],
+      skills: getSkillItems('skills.bi.items'),
       color: 'from-green-500 to-emerald-500'
     },
     {
       icon: Briefcase,
       title: t('skills.business.title'),
       level: t('skills.business.level'),
-      skills: t('skills.business.items', { returnObjects: true }) as string[],
+      skills: getSkillItems('skills.business.items'),
       color: 'from-cyan-500 to-teal-500'
     }
   ];
