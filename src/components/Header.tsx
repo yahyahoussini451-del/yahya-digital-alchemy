@@ -37,12 +37,19 @@ export const Header = () => {
       return;
     }
     
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
-      setActiveSection(id);
-    }
+    // Force hero to expand immediately before scrolling
+    const forceExpandEvent = new Event('forceHeroExpand');
+    window.dispatchEvent(forceExpandEvent);
+    
+    // Wait a bit for the hero to expand, then scroll
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        setIsMobileMenuOpen(false);
+        setActiveSection(id);
+      }
+    }, 100);
   };
 
   const changeLanguage = (lang: string) => {

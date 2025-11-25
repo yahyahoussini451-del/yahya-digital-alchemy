@@ -16,6 +16,7 @@ interface ScrollExpandMediaProps {
   scrollToExpand?: string;
   textBlend?: boolean;
   children?: ReactNode;
+  onExpandComplete?: () => void;
 }
 
 const ScrollExpandMedia = ({
@@ -28,6 +29,7 @@ const ScrollExpandMedia = ({
   scrollToExpand,
   textBlend,
   children,
+  onExpandComplete,
 }: ScrollExpandMediaProps) => {
   const [scrollProgress, setScrollProgress] = useState<number>(0);
   const [showContent, setShowContent] = useState<boolean>(false);
@@ -42,6 +44,24 @@ const ScrollExpandMedia = ({
     setShowContent(false);
     setMediaFullyExpanded(false);
   }, [mediaType]);
+
+  useEffect(() => {
+    if (mediaFullyExpanded && onExpandComplete) {
+      onExpandComplete();
+    }
+  }, [mediaFullyExpanded, onExpandComplete]);
+
+  useEffect(() => {
+    // Listen for navigation events to force expand
+    const handleForceExpand = () => {
+      setScrollProgress(1);
+      setMediaFullyExpanded(true);
+      setShowContent(true);
+    };
+
+    window.addEventListener('forceHeroExpand', handleForceExpand);
+    return () => window.removeEventListener('forceHeroExpand', handleForceExpand);
+  }, []);
 
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
