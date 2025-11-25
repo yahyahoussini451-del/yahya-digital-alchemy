@@ -38,6 +38,7 @@ const ScrollExpandMedia = ({
   const [isMobileState, setIsMobileState] = useState<boolean>(false);
 
   const sectionRef = useRef<HTMLDivElement | null>(null);
+  const handleScrollRef = useRef<(() => void) | null>(null);
 
   useEffect(() => {
     setScrollProgress(0);
@@ -57,6 +58,8 @@ const ScrollExpandMedia = ({
       setScrollProgress(1);
       setMediaFullyExpanded(true);
       setShowContent(true);
+      // Allow immediate scrolling by enabling scroll for a moment
+      window.removeEventListener('scroll', handleScrollRef.current!);
     };
 
     window.addEventListener('forceHeroExpand', handleForceExpand);
@@ -138,6 +141,8 @@ const ScrollExpandMedia = ({
         window.scrollTo(0, 0);
       }
     };
+    
+    handleScrollRef.current = handleScroll;
 
     window.addEventListener('wheel', handleWheel, { passive: false });
     window.addEventListener('scroll', handleScroll);
