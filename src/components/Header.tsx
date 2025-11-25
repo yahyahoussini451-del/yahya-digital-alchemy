@@ -60,32 +60,32 @@ export const Header = () => {
       }`}
       role="banner"
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-3 sm:px-4 lg:px-6">
+        <div className="flex items-center justify-between h-16 sm:h-18 lg:h-20">
           {/* Logo */}
           <button
             onClick={() => scrollToSection('home')}
-            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            className="flex items-center gap-1.5 sm:gap-2 hover:opacity-80 transition-opacity shrink-0"
             aria-label="Yahya Houssini Home"
           >
             <img 
               src="/logo.png" 
               alt="Yahya Houssini Logo" 
-              className="h-10 w-10" 
+              className="h-8 w-8 sm:h-10 sm:w-10" 
               loading="eager" 
               width="40" 
               height="40" 
             />
-            <span className="text-xl font-bold text-foreground">yahya.</span>
+            <span className="text-lg sm:text-xl font-bold text-foreground">yahya.</span>
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1 bg-secondary/50 backdrop-blur-sm rounded-full px-2 py-2 border border-border/50">
+          <nav className="hidden md:flex items-center gap-0.5 lg:gap-1 bg-secondary/50 backdrop-blur-sm rounded-full px-1.5 lg:px-2 py-1.5 lg:py-2 border border-border/50 mx-2">
             {navItems.map((item) => (
               <button
                 key={item.key}
                 onClick={() => scrollToSection(item.id)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`px-3 md:px-4 lg:px-6 py-1.5 lg:py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-300 whitespace-nowrap ${
                   activeSection === item.id
                     ? 'bg-primary text-primary-foreground shadow-sm'
                     : 'text-muted-foreground hover:text-foreground hover:bg-background/50'
@@ -97,12 +97,12 @@ export const Header = () => {
           </nav>
 
           {/* Language Switcher - Desktop */}
-          <div className="hidden lg:flex items-center gap-2 bg-secondary/50 backdrop-blur-sm rounded-full px-2 py-2 border border-border/50">
+          <div className="hidden md:flex items-center gap-1 lg:gap-2 bg-secondary/50 backdrop-blur-sm rounded-full px-1.5 lg:px-2 py-1.5 lg:py-2 border border-border/50 shrink-0">
             <Button
               variant={i18n.language === 'en' ? 'default' : 'ghost'}
               size="sm"
               onClick={() => changeLanguage('en')}
-              className="text-xs rounded-full"
+              className="text-xs rounded-full h-7 lg:h-8 px-2 lg:px-3"
             >
               EN
             </Button>
@@ -110,7 +110,7 @@ export const Header = () => {
               variant={i18n.language === 'fr' ? 'default' : 'ghost'}
               size="sm"
               onClick={() => changeLanguage('fr')}
-              className="text-xs rounded-full"
+              className="text-xs rounded-full h-7 lg:h-8 px-2 lg:px-3"
             >
               FR
             </Button>
@@ -118,7 +118,7 @@ export const Header = () => {
               variant={i18n.language === 'ar' ? 'default' : 'ghost'}
               size="sm"
               onClick={() => changeLanguage('ar')}
-              className="text-xs rounded-full"
+              className="text-xs rounded-full h-7 lg:h-8 px-2 lg:px-3"
             >
               AR
             </Button>
@@ -127,37 +127,37 @@ export const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 hover:bg-secondary/50 rounded-lg transition-colors"
+            className="md:hidden p-2 hover:bg-secondary/50 rounded-lg transition-colors shrink-0"
             aria-label="Toggle mobile menu"
             aria-expanded={isMobileMenuOpen}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X className="h-5 w-5 sm:h-6 sm:w-6" /> : <Menu className="h-5 w-5 sm:h-6 sm:w-6" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden pb-4 pt-2 border-t border-border animate-in slide-in-from-top-2">
-            <nav className="flex flex-col gap-2">
+          <div className="md:hidden pb-3 sm:pb-4 pt-2 border-t border-border animate-in slide-in-from-top-2 duration-200">
+            <nav className="flex flex-col gap-1.5 sm:gap-2">
               {navItems.map((item) => (
                 <button
                   key={item.key}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-left px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  className={`text-left px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors touch-manipulation ${
                     activeSection === item.id
                       ? 'bg-primary text-primary-foreground'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
+                      : 'text-muted-foreground hover:text-foreground hover:bg-secondary active:bg-secondary/80'
                   }`}
                 >
                   {t(`nav.${item.key}`)}
                 </button>
               ))}
-              <div className="flex gap-2 pt-2 px-4">
+              <div className="flex gap-2 pt-2 px-2 sm:px-3">
                 <Button
                   variant={i18n.language === 'en' ? 'default' : 'ghost'}
                   size="sm"
                   onClick={() => changeLanguage('en')}
-                  className="text-xs flex-1"
+                  className="text-xs sm:text-sm flex-1 h-9 sm:h-10 touch-manipulation"
                 >
                   EN
                 </Button>
@@ -165,7 +165,7 @@ export const Header = () => {
                   variant={i18n.language === 'fr' ? 'default' : 'ghost'}
                   size="sm"
                   onClick={() => changeLanguage('fr')}
-                  className="text-xs flex-1"
+                  className="text-xs sm:text-sm flex-1 h-9 sm:h-10 touch-manipulation"
                 >
                   FR
                 </Button>
@@ -173,7 +173,7 @@ export const Header = () => {
                   variant={i18n.language === 'ar' ? 'default' : 'ghost'}
                   size="sm"
                   onClick={() => changeLanguage('ar')}
-                  className="text-xs flex-1"
+                  className="text-xs sm:text-sm flex-1 h-9 sm:h-10 touch-manipulation"
                 >
                   AR
                 </Button>
