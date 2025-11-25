@@ -30,6 +30,13 @@ export const Header = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
+    // If it's blog, navigate to blog page
+    if (id === 'blog') {
+      window.location.href = '/blog';
+      setIsMobileMenuOpen(false);
+      return;
+    }
+    
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -48,6 +55,7 @@ export const Header = () => {
     { key: 'about', id: 'about' },
     { key: 'skills', id: 'skills' },
     { key: 'appsPortfolio', id: 'apps-portfolio' },
+    { key: 'blog', id: 'blog' },
     { key: 'certifications', id: 'certifications' },
     { key: 'testimonials', id: 'testimonials' },
     { key: 'contact', id: 'contact' }
