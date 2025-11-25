@@ -37,6 +37,16 @@ export const Header = () => {
       return;
     }
     
+    // Check if we're not on home page
+    const isHomePage = window.location.pathname === '/';
+    
+    if (!isHomePage) {
+      // Navigate to home with section hash
+      window.location.href = `/#${id}`;
+      setIsMobileMenuOpen(false);
+      return;
+    }
+    
     // Force hero to expand immediately before scrolling
     const forceExpandEvent = new Event('forceHeroExpand');
     window.dispatchEvent(forceExpandEvent);
