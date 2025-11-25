@@ -81,7 +81,7 @@ export const Certifications = () => {
 
   // Always render section even with no data, show message instead
   return (
-    <section id="certifications" className="py-20 md:py-32 bg-gradient-to-b from-background to-accent/5">
+    <section id="certifications" className="py-20 md:py-32 bg-secondary/50 min-h-screen">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
