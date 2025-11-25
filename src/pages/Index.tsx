@@ -1,5 +1,5 @@
 import { Header } from '@/components/Header';
-import { Hero } from '@/components/Hero';
+import { HeroNew } from '@/components/HeroNew';
 import { About } from '@/components/About';
 import { Skills } from '@/components/Skills';
 import { Innovation3D } from '@/components/Innovation3D';
@@ -27,7 +27,7 @@ const Index = () => {
       <FAQSchema />
       <Header />
       <main>
-        <Hero />
+        <HeroNew />
         <TrustBar />
         <About />
         <EEATSection />
