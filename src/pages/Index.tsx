@@ -18,6 +18,7 @@ import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 import { SEOHead } from '@/components/SEOHead';
 import { FAQSchema } from '@/components/FAQSchema';
+import { SkipToContent } from '@/components/SkipToContent';
 import { useEffect } from 'react';
 import '@/i18n/config';
 
@@ -45,8 +46,9 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SEOHead />
       <FAQSchema />
+      <SkipToContent />
       <Header />
-      <main>
+      <main id="main-content" role="main">
         <HeroNew />
         <TrustBar />
         <About />

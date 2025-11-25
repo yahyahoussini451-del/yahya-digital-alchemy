@@ -113,44 +113,68 @@ export const Contact = () => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <form onSubmit={handleSubmit} className="space-y-6 bg-card rounded-2xl p-8 shadow-lg">
+              <form onSubmit={handleSubmit} className="space-y-6 bg-card rounded-2xl p-8 shadow-lg" aria-labelledby="contact-form-title">
+                <h3 id="contact-form-title" className="sr-only">{t('contact.title')}</h3>
                 <div>
+                  <label htmlFor="contact-name" className="block text-sm font-medium mb-2 text-foreground">
+                    {t('contact.name')}
+                  </label>
                   <Input
+                    id="contact-name"
                     type="text"
                     name="name"
                     placeholder={t('contact.name')}
                     required
                     maxLength={100}
                     className="h-12"
+                    aria-required="true"
+                    aria-describedby="name-help"
                   />
+                  <span id="name-help" className="sr-only">Enter your full name (maximum 100 characters)</span>
                 </div>
                 <div>
+                  <label htmlFor="contact-email" className="block text-sm font-medium mb-2 text-foreground">
+                    {t('contact.email')}
+                  </label>
                   <Input
+                    id="contact-email"
                     type="email"
                     name="email"
                     placeholder={t('contact.email')}
                     required
                     maxLength={255}
                     className="h-12"
+                    aria-required="true"
+                    aria-describedby="email-help"
                   />
+                  <span id="email-help" className="sr-only">Enter a valid email address</span>
                 </div>
                 <div>
+                  <label htmlFor="contact-message" className="block text-sm font-medium mb-2 text-foreground">
+                    {t('contact.message')}
+                  </label>
                   <Textarea
+                    id="contact-message"
                     name="message"
                     placeholder={t('contact.message')}
                     required
                     maxLength={1000}
                     rows={6}
                     className="resize-none"
+                    aria-required="true"
+                    aria-describedby="message-help"
                   />
+                  <span id="message-help" className="sr-only">Enter your message (maximum 1000 characters)</span>
                 </div>
                 <Button
                   type="submit"
                   size="lg"
                   disabled={isSubmitting}
+                  aria-busy={isSubmitting}
+                  aria-live="polite"
                   className="w-full bg-gradient-to-r from-[hsl(330,81%,60%)] to-[hsl(340,82%,52%)] hover:opacity-90 transition-opacity text-white font-medium"
                 >
-                  <Mail className="w-5 h-5 mr-2" />
+                  <Mail className="w-5 h-5 mr-2" aria-hidden="true" />
                   {isSubmitting ? 'Sending...' : t('contact.send')}
                 </Button>
               </form>
@@ -167,12 +191,13 @@ export const Contact = () => {
                 size="lg"
                 className="mb-8"
                 onClick={() => window.open('https://wa.me/212703026422', '_blank')}
+                aria-label="Contact via WhatsApp at +212 703 026 422"
               >
-                <MessageSquare className="w-5 h-5 mr-2" />
+                <MessageSquare className="w-5 h-5 mr-2" aria-hidden="true" />
                 {t('contact.whatsapp')}
               </Button>
 
-              <div className="flex justify-center gap-4">
+              <div className="flex justify-center gap-4" role="list" aria-label="Social media links">
                 {socialLinks.map((social) => {
                   const Icon = social.icon;
                   return (
@@ -181,10 +206,11 @@ export const Contact = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
-                      aria-label={social.label}
+                      className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors focus-visible:ring-2 focus-visible:ring-primary"
+                      aria-label={`${social.label} - Opens in new window`}
+                      role="listitem"
                     >
-                      <Icon className="w-5 h-5" />
+                      <Icon className="w-5 h-5" aria-hidden="true" />
                     </a>
                   );
                 })}

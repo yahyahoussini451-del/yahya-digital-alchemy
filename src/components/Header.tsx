@@ -105,12 +105,17 @@ export const Header = () => {
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-0.5 lg:gap-1 bg-secondary/50 backdrop-blur-sm rounded-full px-1.5 lg:px-2 py-1.5 lg:py-2 border border-border/50 mx-2">
+          <nav 
+            className="hidden md:flex items-center gap-0.5 lg:gap-1 bg-secondary/50 backdrop-blur-sm rounded-full px-1.5 lg:px-2 py-1.5 lg:py-2 border border-border/50 mx-2"
+            aria-label="Main navigation"
+          >
             {navItems.map((item) => (
               <button
                 key={item.key}
                 onClick={() => scrollToSection(item.id)}
-                className={`px-3 md:px-4 lg:px-6 py-1.5 lg:py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-300 whitespace-nowrap ${
+                aria-label={`Navigate to ${t(`nav.${item.key}`)}`}
+                aria-current={activeSection === item.id ? 'page' : undefined}
+                className={`px-3 md:px-4 lg:px-6 py-1.5 lg:py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-300 whitespace-nowrap focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${
                   activeSection === item.id
                     ? 'bg-primary text-primary-foreground shadow-sm'
                     : 'text-muted-foreground hover:text-foreground hover:bg-background/50'
@@ -122,11 +127,17 @@ export const Header = () => {
           </nav>
 
           {/* Language Switcher - Desktop */}
-          <div className="hidden md:flex items-center gap-1 lg:gap-2 bg-secondary/50 backdrop-blur-sm rounded-full px-1.5 lg:px-2 py-1.5 lg:py-2 border border-border/50 shrink-0">
+          <div 
+            className="hidden md:flex items-center gap-1 lg:gap-2 bg-secondary/50 backdrop-blur-sm rounded-full px-1.5 lg:px-2 py-1.5 lg:py-2 border border-border/50 shrink-0"
+            role="group"
+            aria-label="Language selection"
+          >
             <Button
               variant={i18n.language === 'en' ? 'default' : 'ghost'}
               size="sm"
               onClick={() => changeLanguage('en')}
+              aria-label="Switch to English"
+              aria-pressed={i18n.language === 'en'}
               className="text-xs rounded-full h-7 lg:h-8 px-2 lg:px-3"
             >
               EN
@@ -135,6 +146,8 @@ export const Header = () => {
               variant={i18n.language === 'fr' ? 'default' : 'ghost'}
               size="sm"
               onClick={() => changeLanguage('fr')}
+              aria-label="Passer au français"
+              aria-pressed={i18n.language === 'fr'}
               className="text-xs rounded-full h-7 lg:h-8 px-2 lg:px-3"
             >
               FR
@@ -143,6 +156,8 @@ export const Header = () => {
               variant={i18n.language === 'ar' ? 'default' : 'ghost'}
               size="sm"
               onClick={() => changeLanguage('ar')}
+              aria-label="التبديل إلى العربية"
+              aria-pressed={i18n.language === 'ar'}
               className="text-xs rounded-full h-7 lg:h-8 px-2 lg:px-3"
             >
               AR
@@ -162,13 +177,19 @@ export const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden pb-3 sm:pb-4 pt-2 border-t border-border animate-in slide-in-from-top-2 duration-200">
-            <nav className="flex flex-col gap-1.5 sm:gap-2">
+          <div 
+            className="md:hidden pb-3 sm:pb-4 pt-2 border-t border-border animate-in slide-in-from-top-2 duration-200"
+            role="dialog"
+            aria-label="Mobile navigation menu"
+          >
+            <nav className="flex flex-col gap-1.5 sm:gap-2" aria-label="Main navigation">
               {navItems.map((item) => (
                 <button
                   key={item.key}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-left px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors touch-manipulation ${
+                  aria-label={`Navigate to ${t(`nav.${item.key}`)}`}
+                  aria-current={activeSection === item.id ? 'page' : undefined}
+                  className={`text-left px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors touch-manipulation focus-visible:ring-2 focus-visible:ring-primary ${
                     activeSection === item.id
                       ? 'bg-primary text-primary-foreground'
                       : 'text-muted-foreground hover:text-foreground hover:bg-secondary active:bg-secondary/80'
@@ -177,11 +198,13 @@ export const Header = () => {
                   {t(`nav.${item.key}`)}
                 </button>
               ))}
-              <div className="flex gap-2 pt-2 px-2 sm:px-3">
+              <div className="flex gap-2 pt-2 px-2 sm:px-3" role="group" aria-label="Language selection">
                 <Button
                   variant={i18n.language === 'en' ? 'default' : 'ghost'}
                   size="sm"
                   onClick={() => changeLanguage('en')}
+                  aria-label="Switch to English"
+                  aria-pressed={i18n.language === 'en'}
                   className="text-xs sm:text-sm flex-1 h-9 sm:h-10 touch-manipulation"
                 >
                   EN
@@ -190,6 +213,8 @@ export const Header = () => {
                   variant={i18n.language === 'fr' ? 'default' : 'ghost'}
                   size="sm"
                   onClick={() => changeLanguage('fr')}
+                  aria-label="Passer au français"
+                  aria-pressed={i18n.language === 'fr'}
                   className="text-xs sm:text-sm flex-1 h-9 sm:h-10 touch-manipulation"
                 >
                   FR
@@ -198,6 +223,8 @@ export const Header = () => {
                   variant={i18n.language === 'ar' ? 'default' : 'ghost'}
                   size="sm"
                   onClick={() => changeLanguage('ar')}
+                  aria-label="التبديل إلى العربية"
+                  aria-pressed={i18n.language === 'ar'}
                   className="text-xs sm:text-sm flex-1 h-9 sm:h-10 touch-manipulation"
                 >
                   AR
