@@ -64,6 +64,15 @@ const ScrollExpandMedia = ({
   }, []);
 
   useEffect(() => {
+    // Check if page has a hash on load - if yes, show content immediately
+    if (window.location.hash) {
+      setScrollProgress(1);
+      setMediaFullyExpanded(true);
+      setShowContent(true);
+    }
+  }, []);
+
+  useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
       if (mediaFullyExpanded && e.deltaY < 0 && window.scrollY <= 5) {
         setMediaFullyExpanded(false);
@@ -282,9 +291,9 @@ const ScrollExpandMedia = ({
 
             <motion.section
               className='flex flex-col w-full px-4 py-10 md:px-16 lg:py-20'
-              initial={{ opacity: 0 }}
-              animate={{ opacity: showContent ? 1 : 0 }}
-              transition={{ duration: 0.7 }}
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0 }}
             >
               {children}
             </motion.section>
