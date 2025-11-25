@@ -71,7 +71,7 @@ export const Certifications = () => {
 
   if (loading) {
     return (
-      <section id="certifications" className="py-20 md:py-32 bg-gradient-to-b from-background to-accent/5">
+      <section id="certifications" className="py-20 md:py-32 bg-secondary/50 min-h-screen">
         <div className="container mx-auto px-4 flex justify-center">
           <Loader2 className="h-8 w-8 animate-spin text-primary" />
         </div>

@@ -89,7 +89,7 @@ export const AppsPortfolio = () => {
 
   if (loading) {
     return (
-      <section className="py-24 bg-gradient-to-b from-background to-muted/20">
+      <section className="py-24 bg-muted/30 min-h-screen">
         <div className="container mx-auto px-4 flex justify-center">
           <Loader2 className="h-8 w-8 animate-spin text-primary" />
         </div>
