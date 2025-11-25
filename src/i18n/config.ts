@@ -1,23 +1,35 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import en from './locales/en.json';
-import fr from './locales/fr.json';
-import ar from './locales/ar.json';
 
+// Lazy load translations for better initial load performance
 i18n
   .use(initReactI18next)
   .init({
-    resources: {
-      en: { translation: en },
-      fr: { translation: fr },
-      ar: { translation: ar }
-    },
+    resources: {},
     lng: 'en',
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false
+    },
+    react: {
+      useSuspense: false // Prevent suspense for better performance
     }
   });
+
+// Load translations asynchronously
+const loadTranslations = async () => {
+  const [en, fr, ar] = await Promise.all([
+    import('./locales/en.json'),
+    import('./locales/fr.json'),
+    import('./locales/ar.json')
+  ]);
+  
+  i18n.addResourceBundle('en', 'translation', en.default);
+  i18n.addResourceBundle('fr', 'translation', fr.default);
+  i18n.addResourceBundle('ar', 'translation', ar.default);
+};
+
+loadTranslations();
 
 // RTL support - automatically switch direction when language changes
 i18n.on('languageChanged', (lng) => {
