@@ -43,7 +43,7 @@ export const EEATSection = () => {
 
   return (
     <section 
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-muted/20 via-background to-muted/20"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30"
       ref={ref}
     >
       <div className="max-w-7xl mx-auto">
