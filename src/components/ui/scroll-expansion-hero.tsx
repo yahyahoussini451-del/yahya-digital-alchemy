@@ -36,6 +36,7 @@ const ScrollExpandMedia = ({
   const [mediaFullyExpanded, setMediaFullyExpanded] = useState<boolean>(false);
   const [touchStartY, setTouchStartY] = useState<number>(0);
   const [isMobileState, setIsMobileState] = useState<boolean>(false);
+  const [scrollBlockingDisabled, setScrollBlockingDisabled] = useState<boolean>(false);
 
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const handleScrollRef = useRef<(() => void) | null>(null);
@@ -58,8 +59,7 @@ const ScrollExpandMedia = ({
       setScrollProgress(1);
       setMediaFullyExpanded(true);
       setShowContent(true);
-      // Allow immediate scrolling by enabling scroll for a moment
-      window.removeEventListener('scroll', handleScrollRef.current!);
+      setScrollBlockingDisabled(true);
     };
 
     window.addEventListener('forceHeroExpand', handleForceExpand);
@@ -72,11 +72,26 @@ const ScrollExpandMedia = ({
       setScrollProgress(1);
       setMediaFullyExpanded(true);
       setShowContent(true);
+      setScrollBlockingDisabled(true);
+    } else {
+      // Auto-expand after 3 seconds if user hasn't scrolled
+      const autoExpandTimer = setTimeout(() => {
+        if (scrollProgress < 1 && !mediaFullyExpanded) {
+          setScrollProgress(1);
+          setMediaFullyExpanded(true);
+          setShowContent(true);
+          setScrollBlockingDisabled(true);
+        }
+      }, 3000);
+      return () => clearTimeout(autoExpandTimer);
     }
   }, []);
 
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
+      // Skip scroll blocking if disabled
+      if (scrollBlockingDisabled) return;
+      
       if (mediaFullyExpanded && e.deltaY < 0 && window.scrollY <= 5) {
         setMediaFullyExpanded(false);
         e.preventDefault();
@@ -104,6 +119,9 @@ const ScrollExpandMedia = ({
 
     const handleTouchMove = (e: TouchEvent) => {
       if (!touchStartY) return;
+      
+      // Skip scroll blocking if disabled
+      if (scrollBlockingDisabled) return;
 
       const touchY = e.touches[0].clientY;
       const deltaY = touchStartY - touchY;
@@ -137,7 +155,7 @@ const ScrollExpandMedia = ({
     };
 
     const handleScroll = (): void => {
-      if (!mediaFullyExpanded) {
+      if (!mediaFullyExpanded && !scrollBlockingDisabled) {
         window.scrollTo(0, 0);
       }
     };
@@ -157,7 +175,7 @@ const ScrollExpandMedia = ({
       window.removeEventListener('touchmove', handleTouchMove);
       window.removeEventListener('touchend', handleTouchEnd);
     };
-  }, [scrollProgress, mediaFullyExpanded, touchStartY]);
+  }, [scrollProgress, mediaFullyExpanded, touchStartY, scrollBlockingDisabled]);
 
   useEffect(() => {
     const checkIfMobile = (): void => {
