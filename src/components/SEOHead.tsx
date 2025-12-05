@@ -234,7 +234,94 @@ export const SEOHead = ({
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://yahyahoussini.com"
+        "item": "https://yahyahoussini.pro"
+      }
+    ]
+  };
+
+  // WebSite Schema for Sitelinks Search Box
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Yahya Houssini - Full Stack Developer & AI Expert",
+    "alternateName": ["Yahya Houssini", "يحيى حسيني"],
+    "url": "https://yahyahoussini.pro",
+    "description": siteDescription,
+    "inLanguage": ["en", "fr", "ar"],
+    "publisher": {
+      "@type": "Person",
+      "name": "Yahya Houssini"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://yahyahoussini.pro/blog?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  // SiteNavigationElement Schema for Google Sitelinks
+  const siteNavigationSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "SiteNavigationElement",
+        "position": 1,
+        "name": "About",
+        "description": "Learn about Yahya Houssini's experience and expertise",
+        "url": "https://yahyahoussini.pro/#about"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 2,
+        "name": "Skills",
+        "description": "Technical skills and technologies",
+        "url": "https://yahyahoussini.pro/#skills"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 3,
+        "name": "Portfolio",
+        "description": "Apps and projects built for Moroccan businesses",
+        "url": "https://yahyahoussini.pro/#apps-portfolio"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 4,
+        "name": "Services",
+        "description": "Web development, AI integration, and digital marketing services",
+        "url": "https://yahyahoussini.pro/#services"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 5,
+        "name": "Blog",
+        "description": "Articles about AI, web development, and business",
+        "url": "https://yahyahoussini.pro/blog"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 6,
+        "name": "Certifications",
+        "description": "Professional certifications and achievements",
+        "url": "https://yahyahoussini.pro/#certifications"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 7,
+        "name": "Testimonials",
+        "description": "Client reviews and feedback",
+        "url": "https://yahyahoussini.pro/#testimonials"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 8,
+        "name": "Contact",
+        "description": "Get in touch for project inquiries",
+        "url": "https://yahyahoussini.pro/#contact"
       }
     ]
   };
@@ -285,7 +372,13 @@ export const SEOHead = ({
       <meta name="geo.position" content="33.971588;-6.849813" />
       <meta name="ICBM" content="33.971588, -6.849813" />
 
-      {/* JSON-LD Structured Data for Google AI Overviews */}
+      {/* JSON-LD Structured Data for Google AI Overviews & Sitelinks */}
+      <script type="application/ld+json">
+        {JSON.stringify(websiteSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(siteNavigationSchema)}
+      </script>
       <script type="application/ld+json">
         {JSON.stringify(professionalServiceSchema)}
       </script>
