@@ -31,21 +31,23 @@ const ScrollExpandMedia = ({
   children,
   onExpandComplete,
 }: ScrollExpandMediaProps) => {
-  const [scrollProgress, setScrollProgress] = useState<number>(0);
-  const [showContent, setShowContent] = useState<boolean>(false);
-  const [mediaFullyExpanded, setMediaFullyExpanded] = useState<boolean>(false);
+  // Start fully expanded so users can always scroll to see content
+  const [scrollProgress, setScrollProgress] = useState<number>(1);
+  const [showContent, setShowContent] = useState<boolean>(true);
+  const [mediaFullyExpanded, setMediaFullyExpanded] = useState<boolean>(true);
   const [touchStartY, setTouchStartY] = useState<number>(0);
   const [isMobileState, setIsMobileState] = useState<boolean>(false);
-  const [scrollBlockingDisabled, setScrollBlockingDisabled] = useState<boolean>(false);
+  const [scrollBlockingDisabled, setScrollBlockingDisabled] = useState<boolean>(true);
 
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const handleScrollRef = useRef<(() => void) | null>(null);
 
-  useEffect(() => {
-    setScrollProgress(0);
-    setShowContent(false);
-    setMediaFullyExpanded(false);
-  }, [mediaType]);
+  // Removed: This was resetting the expanded state on mediaType change
+  // useEffect(() => {
+  //   setScrollProgress(0);
+  //   setShowContent(false);
+  //   setMediaFullyExpanded(false);
+  // }, [mediaType]);
 
   useEffect(() => {
     if (mediaFullyExpanded && onExpandComplete) {
@@ -66,26 +68,7 @@ const ScrollExpandMedia = ({
     return () => window.removeEventListener('forceHeroExpand', handleForceExpand);
   }, []);
 
-  useEffect(() => {
-    // Check if page has a hash on load - if yes, show content immediately
-    if (window.location.hash) {
-      setScrollProgress(1);
-      setMediaFullyExpanded(true);
-      setShowContent(true);
-      setScrollBlockingDisabled(true);
-    } else {
-      // Auto-expand after 3 seconds if user hasn't scrolled
-      const autoExpandTimer = setTimeout(() => {
-        if (scrollProgress < 1 && !mediaFullyExpanded) {
-          setScrollProgress(1);
-          setMediaFullyExpanded(true);
-          setShowContent(true);
-          setScrollBlockingDisabled(true);
-        }
-      }, 3000);
-      return () => clearTimeout(autoExpandTimer);
-    }
-  }, []);
+  // Hero starts expanded - no need for hash check or auto-expand timer
 
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
