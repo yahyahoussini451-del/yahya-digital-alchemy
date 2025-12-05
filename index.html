@@ -40,7 +40,75 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     
-    <!-- Structured Data for SEO -->
+    <!-- Structured Data for SEO & Google Sitelinks -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Yahya Houssini - Full Stack Developer & AI Expert",
+      "alternateName": ["Yahya Houssini", "يحيى حسيني"],
+      "url": "https://yahyahoussini.pro",
+      "description": "Professional web developer and branding agency in Morocco specializing in full stack development, AI automation, and digital marketing",
+      "inLanguage": ["en", "fr", "ar"],
+      "publisher": {
+        "@type": "Person",
+        "name": "Yahya Houssini"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Site Navigation",
+      "itemListElement": [
+        {
+          "@type": "SiteNavigationElement",
+          "position": 1,
+          "name": "About",
+          "description": "Learn about Yahya Houssini's experience and expertise",
+          "url": "https://yahyahoussini.pro/#about"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 2,
+          "name": "Portfolio",
+          "description": "Apps and projects built for Moroccan businesses",
+          "url": "https://yahyahoussini.pro/#apps-portfolio"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 3,
+          "name": "Services",
+          "description": "Web development, AI integration, and digital marketing services",
+          "url": "https://yahyahoussini.pro/#services"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 4,
+          "name": "Blog",
+          "description": "Articles about AI, web development, and business",
+          "url": "https://yahyahoussini.pro/blog"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 5,
+          "name": "Certifications",
+          "description": "Professional certifications and achievements",
+          "url": "https://yahyahoussini.pro/#certifications"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 6,
+          "name": "Contact",
+          "description": "Get in touch for project inquiries",
+          "url": "https://yahyahoussini.pro/#contact"
+        }
+      ]
+    }
+    </script>
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
