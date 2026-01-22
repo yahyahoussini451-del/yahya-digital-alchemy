@@ -10,7 +10,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
             <p className="text-sm text-muted-foreground">{t('footer.tagline')}</p>
-            <p className="text-xs text-muted-foreground mt-2">© 2025 Yahya Houssini. All rights reserved.</p>
+            <p className="text-xs text-muted-foreground mt-2">© 2026 Yahya Houssini. All rights reserved.</p>
           </div>
           
           <div className="flex gap-4">
