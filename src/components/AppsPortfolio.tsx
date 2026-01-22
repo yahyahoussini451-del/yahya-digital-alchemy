@@ -40,6 +40,7 @@ export const AppsPortfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [apps, setApps] = useState<App[]>([]);
   const [loading, setLoading] = useState(true);
+  const [visibleCount, setVisibleCount] = useState(6);
 
   useEffect(() => {
     fetchApps();
@@ -85,7 +86,19 @@ export const AppsPortfolio = () => {
     return matchesSearch && matchesCategory;
   });
 
-  console.log('AppsPortfolio - Total apps:', apps.length, 'Filtered apps:', filteredApps.length, 'Loading:', loading);
+  // Reset visible count when filters change
+  useEffect(() => {
+    setVisibleCount(6);
+  }, [searchTerm, selectedCategory]);
+
+  const displayedApps = filteredApps.slice(0, visibleCount);
+  const hasMoreApps = visibleCount < filteredApps.length;
+
+  const handleLoadMore = () => {
+    setVisibleCount(prev => prev + 6);
+  };
+
+  console.log('AppsPortfolio - Total apps:', apps.length, 'Filtered apps:', filteredApps.length, 'Displayed:', displayedApps.length, 'Loading:', loading);
 
   if (loading) {
     return (
@@ -150,7 +163,7 @@ export const AppsPortfolio = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredApps.map((app, index) => (
+          {displayedApps.map((app, index) => (
             <motion.div
               key={app.id}
               initial={{ opacity: 1, y: 0 }}
@@ -253,6 +266,22 @@ export const AppsPortfolio = () => {
             </motion.div>
           ))}
         </div>
+
+        {hasMoreApps && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="flex justify-center mt-12"
+          >
+            <Button 
+              onClick={handleLoadMore}
+              size="lg"
+              className="px-8 py-6 text-lg"
+            >
+              {t('appsPortfolio.loadMore', 'Load More')} ({filteredApps.length - visibleCount} remaining)
+            </Button>
+          </motion.div>
+        )}
 
         {filteredApps.length === 0 && (
           <motion.div
