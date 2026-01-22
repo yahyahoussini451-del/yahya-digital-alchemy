@@ -1,26 +1,39 @@
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Download } from 'lucide-react';
-import ScrollExpandMedia from '@/components/ui/scroll-expansion-hero';
+import { ContainerScroll } from '@/components/ui/container-scroll-animation';
 import heroSpeaking from '@/assets/hero-speaking.png';
 
 export const HeroNew = () => {
   const { t } = useTranslation();
 
   return (
-    <>
-      <ScrollExpandMedia
-        mediaType="image"
-        mediaSrc={heroSpeaking}
-        bgImageSrc={heroSpeaking}
-        title={t('hero.title')}
-        subtitle={t('hero.subtitle')}
-        scrollToExpand="Scroll to explore"
-        textBlend={false}
-      />
-      
-      {/* CTA Section - Always visible below hero */}
-      <section className="py-12 bg-background border-b border-border">
+    <div className="flex flex-col overflow-hidden">
+      <ContainerScroll
+        titleComponent={
+          <div className="flex flex-col items-center">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-foreground mb-4">
+              {t('hero.title').split(' ')[0]}{' '}
+              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                {t('hero.title').split(' ').slice(1).join(' ')}
+              </span>
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
+              {t('hero.subtitle')}
+            </p>
+          </div>
+        }
+      >
+        <img
+          src={heroSpeaking}
+          alt={t('hero.title')}
+          className="mx-auto rounded-2xl object-cover h-full w-full"
+          draggable={false}
+        />
+      </ContainerScroll>
+
+      {/* CTA Section */}
+      <section className="py-12 bg-background border-b border-border -mt-40 relative z-10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             {/* CTA Buttons */}
@@ -61,6 +74,6 @@ export const HeroNew = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
