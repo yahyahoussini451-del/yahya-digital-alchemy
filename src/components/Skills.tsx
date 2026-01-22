@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Code2, Brain, TrendingUp, Palette, Award, Briefcase, Box, BarChart3 } from 'lucide-react';
+import { Code2, Brain, Palette, Box, BarChart3, Briefcase } from 'lucide-react';
 
 export const Skills = () => {
   const { t } = useTranslation();
@@ -12,7 +12,6 @@ export const Skills = () => {
   // Helper function to safely get skill items array
   const getSkillItems = (key: string): string[] => {
     const items = t(key, { returnObjects: true });
-    // Ensure we always return an array, even if translation isn't loaded
     if (Array.isArray(items)) {
       return items as string[];
     }
@@ -64,8 +63,11 @@ export const Skills = () => {
     }
   ];
 
+  // Duplicate categories for seamless loop
+  const duplicatedCategories = [...skillCategories, ...skillCategories];
+
   return (
-    <section id="skills" className="py-20 md:py-32 bg-secondary/30">
+    <section id="skills" className="py-20 md:py-32 bg-secondary/30 overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
@@ -116,43 +118,64 @@ export const Skills = () => {
               <div className="text-sm text-muted-foreground">{t('skills.stats.expert')}</div>
             </motion.div>
           </div>
+        </motion.div>
+      </div>
 
-          {/* Skills Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {skillCategories.map((category, index) => {
-              const Icon = category.icon;
-              return (
-                <motion.div
-                  key={category.title}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                  transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                  className="group"
-                >
-                  <div className="bg-card rounded-2xl p-6 h-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+      {/* Horizontal Scrolling Marquee */}
+      <div className="relative w-full">
+        {/* Gradient overlays for fade effect */}
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-secondary/30 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-secondary/30 to-transparent z-10 pointer-events-none" />
+        
+        <motion.div
+          className="flex gap-6 py-4"
+          animate={{
+            x: [0, -50 * skillCategories.length * 6],
+          }}
+          transition={{
+            x: {
+              duration: 30,
+              repeat: Infinity,
+              ease: "linear",
+            },
+          }}
+        >
+          {duplicatedCategories.map((category, index) => {
+            const Icon = category.icon;
+            return (
+              <div
+                key={`${category.title}-${index}`}
+                className="flex-shrink-0 group"
+              >
+                <div className="bg-card rounded-2xl p-6 w-80 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-border/50">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                       <Icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">{category.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-4 font-medium">{category.level}</p>
-                    <div className="space-y-2">
-                      {category.skills.map((skill) => (
-                        <div
-                          key={skill}
-                          className="flex items-start gap-2"
-                        >
-                          <span className="text-primary mt-1">•</span>
-                          <span className="text-sm text-muted-foreground flex-1">
-                            {skill}
-                          </span>
-                        </div>
-                      ))}
+                    <div>
+                      <h3 className="text-lg font-semibold">{category.title}</h3>
+                      <p className="text-xs text-muted-foreground font-medium">{category.level}</p>
                     </div>
                   </div>
-                </motion.div>
-              );
-            })}
-          </div>
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.slice(0, 4).map((skill) => (
+                      <span
+                        key={skill}
+                        className="text-xs px-3 py-1 rounded-full bg-secondary text-muted-foreground"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                    {category.skills.length > 4 && (
+                      <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">
+                        +{category.skills.length - 4}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </motion.div>
       </div>
     </section>
