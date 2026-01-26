@@ -121,9 +121,8 @@ export const Skills = () => {
         </motion.div>
       </div>
 
-      {/* Horizontal Scrolling Marquee */}
+      {/* Horizontal Scrolling Marquee - Row 1 */}
       <div className="relative w-full">
-        {/* Gradient overlays for fade effect */}
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-secondary/30 to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-secondary/30 to-transparent z-10 pointer-events-none" />
         
@@ -144,7 +143,64 @@ export const Skills = () => {
             const Icon = category.icon;
             return (
               <div
-                key={`${category.title}-${index}`}
+                key={`row1-${category.title}-${index}`}
+                className="flex-shrink-0 group"
+              >
+                <div className="bg-card rounded-2xl p-6 w-80 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-border/50">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                      <Icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold">{category.title}</h3>
+                      <p className="text-xs text-muted-foreground font-medium">{category.level}</p>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.slice(0, 4).map((skill) => (
+                      <span
+                        key={skill}
+                        className="text-xs px-3 py-1 rounded-full bg-secondary text-muted-foreground"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                    {category.skills.length > 4 && (
+                      <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">
+                        +{category.skills.length - 4}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </motion.div>
+      </div>
+
+      {/* Horizontal Scrolling Marquee - Row 2 (Reverse) */}
+      <div className="relative w-full mt-6">
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-secondary/30 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-secondary/30 to-transparent z-10 pointer-events-none" />
+        
+        <motion.div
+          className="flex gap-6 py-4"
+          animate={{
+            x: [-50 * skillCategories.length * 6, 0],
+          }}
+          transition={{
+            x: {
+              duration: 35,
+              repeat: Infinity,
+              ease: "linear",
+            },
+          }}
+        >
+          {[...duplicatedCategories].reverse().map((category, index) => {
+            const Icon = category.icon;
+            return (
+              <div
+                key={`row2-${category.title}-${index}`}
                 className="flex-shrink-0 group"
               >
                 <div className="bg-card rounded-2xl p-6 w-80 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-border/50">
