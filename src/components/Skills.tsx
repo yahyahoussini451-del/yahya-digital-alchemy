@@ -154,7 +154,7 @@ export const Skills = () => {
                 key={`row1-${category.title}-${index}`}
                 className="flex-shrink-0 group"
               >
-                <div className="bg-card rounded-2xl p-6 w-80 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-border/50">
+                <div className="bg-card rounded-2xl p-6 w-80 shadow-md hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.3)] transition-all duration-300 hover:-translate-y-2 border border-border/50 hover:border-primary/50">
                   <div className="flex items-center gap-4 mb-4">
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                       <Icon className="w-6 h-6 text-white" />
@@ -216,7 +216,7 @@ export const Skills = () => {
                 key={`row2-${category.title}-${index}`}
                 className="flex-shrink-0 group"
               >
-                <div className="bg-card rounded-2xl p-6 w-80 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-border/50">
+                <div className="bg-card rounded-2xl p-6 w-80 shadow-md hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.3)] transition-all duration-300 hover:-translate-y-2 border border-border/50 hover:border-primary/50">
                   <div className="flex items-center gap-4 mb-4">
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                       <Icon className="w-6 h-6 text-white" />
