@@ -1,13 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Code2, Brain, Palette, Box, BarChart3, Briefcase } from 'lucide-react';
 
 export const Skills = () => {
   const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [isPaused, setIsPaused] = useState(false);
 
   // Helper function to safely get skill items array
   const getSkillItems = (key: string): string[] => {
@@ -122,7 +123,11 @@ export const Skills = () => {
       </div>
 
       {/* Horizontal Scrolling Marquee - Row 1 */}
-      <div className="relative w-full">
+      <div 
+        className="relative w-full"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-secondary/30 to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-secondary/30 to-transparent z-10 pointer-events-none" />
         
@@ -138,6 +143,9 @@ export const Skills = () => {
               ease: "linear",
             },
           }}
+          style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
+          whileHover={{ animationPlayState: 'paused' }}
+          {...(isPaused && { animate: undefined })}
         >
           {duplicatedCategories.map((category, index) => {
             const Icon = category.icon;
@@ -179,7 +187,11 @@ export const Skills = () => {
       </div>
 
       {/* Horizontal Scrolling Marquee - Row 2 (Reverse) */}
-      <div className="relative w-full mt-6">
+      <div 
+        className="relative w-full mt-6"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-secondary/30 to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-secondary/30 to-transparent z-10 pointer-events-none" />
         
@@ -195,6 +207,7 @@ export const Skills = () => {
               ease: "linear",
             },
           }}
+          {...(isPaused && { animate: undefined })}
         >
           {[...duplicatedCategories].reverse().map((category, index) => {
             const Icon = category.icon;
