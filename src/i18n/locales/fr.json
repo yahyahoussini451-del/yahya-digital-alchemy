@@ -33,7 +33,12 @@
     "fullstack": {
       "title": "Développement Full-Stack",
       "level": "Niveau Expert",
-      "items": ["React.js & Vue.js (Avancé)", "Node.js & Express.js (Expert)", "JavaScript/TypeScript (Avancé)", "Python & Django (Intermédiaire)", "HTML5/CSS3 & Design Responsive", "APIs RESTful & GraphQL", "Conception de Base de Données (MongoDB, PostgreSQL)", "Contrôle de Version (Git/GitHub)"]
+      "items": ["React.js & Vue.js (Avancé)", "Node.js & Express.js (Expert)", "JavaScript/TypeScript (Avancé)", "Python & Django (Intermédiaire)", "HTML5/CSS3 & Design Responsive", "APIs RESTful & GraphQL", "Conception de Base de Données (MongoDB, PostgreSQL)", "Contrôle de Version (Git/GitHub)", "PrestaShop (E-Commerce)"]
+    },
+    "webFundamentals": {
+      "title": "Fondamentaux Web",
+      "level": "Niveau Expert",
+      "items": ["JavaScript (ES6+)", "HTML5 Balisage Sémantique", "CSS3 & Animations", "Design Responsive", "Manipulation DOM", "APIs Web", "Compatibilité Multi-Navigateurs", "Optimisation des Performances"]
     },
     "branding": {
       "title": "Expert en Branding & Design",
