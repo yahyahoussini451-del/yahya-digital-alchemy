@@ -33,7 +33,12 @@
     "fullstack": {
       "title": "تطوير Full-Stack",
       "level": "مستوى خبير",
-      "items": ["React.js & Vue.js (متقدم)", "Node.js & Express.js (خبير)", "JavaScript/TypeScript (متقدم)", "Python & Django (متوسط)", "HTML5/CSS3 وتصميم متجاوب", "RESTful APIs & GraphQL", "تصميم قواعد البيانات (MongoDB, PostgreSQL)", "التحكم في الإصدار (Git/GitHub)"]
+      "items": ["React.js & Vue.js (متقدم)", "Node.js & Express.js (خبير)", "JavaScript/TypeScript (متقدم)", "Python & Django (متوسط)", "HTML5/CSS3 وتصميم متجاوب", "RESTful APIs & GraphQL", "تصميم قواعد البيانات (MongoDB, PostgreSQL)", "التحكم في الإصدار (Git/GitHub)", "PrestaShop (التجارة الإلكترونية)"]
+    },
+    "webFundamentals": {
+      "title": "أساسيات الويب",
+      "level": "مستوى خبير",
+      "items": ["JavaScript (ES6+)", "HTML5 ترميز دلالي", "CSS3 والرسوم المتحركة", "تصميم متجاوب", "معالجة DOM", "واجهات برمجة الويب", "التوافق عبر المتصفحات", "تحسين الأداء"]
     },
     "branding": {
       "title": "خبير في العلامات التجارية والتصميم",

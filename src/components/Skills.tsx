@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Code2, Brain, Palette, Box, BarChart3, Briefcase } from 'lucide-react';
+import { Code2, Brain, Palette, Box, BarChart3, Briefcase, Globe } from 'lucide-react';
 
 export const Skills = () => {
   const { t } = useTranslation();
@@ -26,6 +26,13 @@ export const Skills = () => {
       level: t('skills.fullstack.level'),
       skills: getSkillItems('skills.fullstack.items'),
       color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: Globe,
+      title: t('skills.webFundamentals.title'),
+      level: t('skills.webFundamentals.level'),
+      skills: getSkillItems('skills.webFundamentals.items'),
+      color: 'from-yellow-500 to-orange-500'
     },
     {
       icon: Palette,
